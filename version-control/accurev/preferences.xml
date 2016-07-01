@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preferences>
+	<ACCUREV_USE_MOD_TIME>1</ACCUREV_USE_MOD_TIME>
+	<AC_EDITOR_CLI>vi</AC_EDITOR_CLI>
+	<AC_SYNC>ERROR</AC_SYNC>
+	<EDITOR>vi</EDITOR>
+	<SHELL>sh</SHELL>
+	<TEMP>/tmp</TEMP>
+	<WELCOME_SCREEN_DISPLAYED>false</WELCOME_SCREEN_DISPLAYED>
+</preferences>

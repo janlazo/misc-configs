@@ -1,0 +1,31 @@
+[push]
+	default = current
+[credential]
+	helper = cache
+[core]
+	editor = vi
+	filemode = false
+[color]
+	ui = true
+[url "https://github.com/"]
+	insteadOf = gh:
+[url "https://bitbucket.org/"]
+	insteadOf = bb:
+[alias]
+	st = status -s
+	cf = config
+	rb = rebase
+	srb = svn rebase
+	fuck = reset HEAD --hard
+	pl = pull
+	df = diff
+	co = checkout
+	ph = push
+	mg = merge
+	br = branch
+	sbr = svn branch
+	cm = commit
+	scm = svn dcommit
+	clo = clone
+	sclo = svn clone
+    l = log --graph --decorate

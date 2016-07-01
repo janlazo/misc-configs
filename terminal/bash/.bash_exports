@@ -1,0 +1,20 @@
+### Text Editor ###
+export VISUAL=vim.tiny;
+export EDITOR="$VISUAL";
+
+
+### Language Locales ###
+export LC_ALL=en_US.UTF-8;
+export LANG=en_US.UTF-8;
+export LANGUAGE=en_US.UTF-8;
+
+
+### Language Paths ###
+export PYTHONPATH="/usr/bin:/usr/local/bin";
+
+
+### Misc. Environment Variables ###
+export GRAPHVIZ_DOT="/usr/bin/dot";
+
+
+### User-Defined Exports ###
