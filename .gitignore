@@ -1,26 +1,7 @@
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
+#### Compiled files
+## General
 # Executables
+*.bin
 *.exe
 *.out
 *.app
@@ -28,6 +9,68 @@
 *.x86_64
 *.hex
 
-# Debug files
+## Windows
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+## C/C++
+# Definitions
+*.d
+# Object Files
+*.elf
+*.ko
+*.o
+*.obj
+# Precompiled Headers
+*.gch
+*.pch
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+.dylib
+
+## Java
+*.class
+*.jar
+
+## Tex
+*.aux
+*.log
+
+
+#### Compiled directories
+## General
+bin/
+dist/
+lib/
+
+
+#### Debug
+## C/C++
 *.dSYM/
 *.su
+
+#### Image files
+## General
+*.iso
+
+## Wireshark
+*.pcap
+
+
+#### Backup files
+## General
+*~
+*.bak
+
+## Vim
+*.s[a-w][a-z]
+
+
+#### Configs
+tags
