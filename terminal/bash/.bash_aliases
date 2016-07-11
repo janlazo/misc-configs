@@ -12,7 +12,7 @@ alias mkdir='mkdir -pv'
 # Make output readable
 alias ls='ls -hksAF --hide-control-chars'   # --color=auto'
 alias grep='grep -n'
-alias du='du -hk'
+alias du='du -hks'
 alias df='df -hkT'
 
 # Verbose compress/extract archives
