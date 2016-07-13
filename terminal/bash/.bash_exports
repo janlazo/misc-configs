@@ -1,6 +1,6 @@
 ### Text Editor ###
 export VISUAL=vim.tiny;
-export EDITOR="$VISUAL";
+export EDITOR=vim.tiny;
 
 
 ### Language Locales ###
@@ -9,7 +9,7 @@ export LANG=en_US.UTF-8;
 export LANGUAGE=en_US.UTF-8;
 
 
-### Language Paths ###
+### Paths ###
 export PYTHONPATH="/usr/bin:/usr/local/bin";
 
 

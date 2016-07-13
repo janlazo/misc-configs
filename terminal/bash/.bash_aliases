@@ -1,25 +1,29 @@
 ### Basic Shell Commands ###
-# Force interaction and be verbose
-# If possible, be recursive
-alias rm='rm -ivr'
-alias cp='cp -ivr'
-alias mv='mv -iv'
-alias ln='ln -iv'
+## Color Commands ##
+# Verbose
+alias ls.v='ls -hksAF --hide-control-chars'   # --color=auto'
+alias grep.v='grep -n'
 
-# Create parent directories if necessary
-alias mkdir='mkdir -pv'
+## Non-color Commands ##
+# Verbose
+alias rm='rm -v'
+alias cp='cp -v'
+alias mv='mv -v'
+alias ln='ln -v'
+alias mkdir='mkdir -v'
+alias tar='tar -v'
 
-# Make output readable
-alias ls='ls -hksAF --hide-control-chars'   # --color=auto'
-alias grep='grep -n'
 alias du='du -hks'
 alias df='df -hkT'
 
+# Create parent directories if necessary
+alias mkdir.p='mkdir -p'
+
 # Verbose compress/extract archives
-alias tar.c='tar -cvf'      # tar.c <archive.tar> <files>
-alias tar.cz='tar -zcvf'    # tar.cz <archive.tar.gz> <files>
-alias tar.x='tar -xvf'      # tar.x <archive.tar> <archive>
-alias tar.xz='tar -zxvf'    # tar.xz <archive.tar.gz> <archive>
+alias tar.c='tar -cf'      # tar.c <archive.tar> <files>
+alias tar.cz='tar -zcf'    # tar.cz <archive.tar.gz> <files>
+alias tar.x='tar -xf'      # tar.x <archive.tar> <archive>
+alias tar.xz='tar -zxf'    # tar.xz <archive.tar.gz> <archive>
 
 
 ### Package Manager ###
@@ -48,7 +52,7 @@ alias pngcrush='pngcrush -brute -reduce'
 
 
 ### Games ###
-alias desmume="desmume --cpu-mode=1"    # dynamic recompilation (JIT)
+alias desmume.jit="desmume --cpu-mode=1"    # dynamic recompilation (JIT)
 
 
 ### Misc. Apps ###
