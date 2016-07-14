@@ -57,8 +57,8 @@ alias desmume.jit="desmume --cpu-mode=1";    # dynamic recompilation (JIT)
 
 ### Misc. Apps ###
 alias ytdl="youtube-dl --abort-on-error --prefer-free-formats --restrict-filenames --no-overwrites --youtube-skip-dash-manifest";
-alias ytdl.a="ytdl -f '171/bestaudio[acodec=vorbis]/best' -o '~/Music/%(title)s.%(acodec)s.%(ext)s'"
-alias ytdl.v="ytdl -f '43/bestvideo[acodec=vorbis]/best' -o '~/Videos/%(title)s.%(acodec)s.%(vcodec)s.%(ext)s'"
+alias ytdl.a="ytdl -f 'bestaudio[acodec=vorbis]/best' -o '~/Music/%(title)s.%(acodec)s.%(ext)s'"
+alias ytdl.v="ytdl -f 'bestvideo[acodec=vorbis]/best' -o '~/Videos/%(title)s.%(acodec)s.%(vcodec)s.%(ext)s'"
 
 
 ### User-Defined Aliases ###
