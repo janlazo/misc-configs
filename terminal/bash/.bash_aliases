@@ -1,8 +1,8 @@
 ### Basic Shell Commands ###
 ## Color Commands ##
 # Verbose
-alias ls.v='ls -hksAF --hide-control-chars';   # --color=auto'
-alias grep.v='grep -n';
+alias ls.v='ls -hks -AF --escape --group-directories-first';
+alias grep.v='grep -Hn';
 
 ## Non-color Commands ##
 # Verbose
@@ -13,17 +13,27 @@ alias ln='ln -v';
 alias mkdir='mkdir -v';
 alias tar='tar -v';
 
-alias du='du -hks';
-alias df='df -hkT';
+alias du='du -hk --max-depth 1';
+alias df='df -hk --print-type';
 
 # Create parent directories if necessary
 alias mkdir.p='mkdir -p';
 
-# Verbose compress/extract archives
-alias tar.c='tar -cf';      # tar.c <archive.tar> <files>
-alias tar.cz='tar -zcf';    # tar.cz <archive.tar.gz> <files>
+# Single prompt before recursion and don't delete root
+alias rm.safe='rm -I --preserve-root';
+
+# Don't overwrite existing file
+alias cp.safe='cp --no-clobber';
+alias mv.safe='mv --no-clobber';
+
+# Create/Extract (compressed) archives
+alias tar.c='tar --verify -cf';      # tar.c <archive.tar> <files>
+alias tar.cz='tar --verify -zcf';    # tar.cz <archive.tar.gz> <files>
 alias tar.x='tar -xf';      # tar.x <archive.tar> <archive>
 alias tar.xz='tar -zxf';    # tar.xz <archive.tar.gz> <archive>
+
+# List archive contents (without extraction)
+alias tar.list='tar --totals --block-number -tf'; # tar.t <archive.tar>
 
 
 ### Package Manager ###
