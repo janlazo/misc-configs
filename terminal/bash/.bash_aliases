@@ -1,8 +1,22 @@
 ### Basic Shell Commands ###
 ## Color Commands ##
+# Color it through arguments
+# TODO: Add if block to check if required bins/configs are met
+#alias ls='ls --color=auto';
+#alias grep='grep --color=auto';
+
+# Replace command with its colour counterpart
+# TODO: Add if block to check if required bins/configs are met
+#alias diff='colordiff';
+#alias gcc='colorgcc';
+#alias make='colormake';
+
 # Verbose
 alias ls.v='ls -hks -AF --escape --group-directories-first';
 alias grep.v='grep -Hn';
+alias rgrep.v='grep.v -r';
+alias fgrep.v='grep.v -F';
+alias egrep.v='grep.v -E';
 
 ## Non-color Commands ##
 # Verbose
@@ -13,6 +27,7 @@ alias ln='ln -v';
 alias mkdir='mkdir -v';
 alias tar='tar -v';
 
+alias free='free -hlt';
 alias du='du -hk --max-depth 1';
 alias df='df -hk --print-type';
 
@@ -54,6 +69,10 @@ alias emacs='emacs -nw';     # open in terminal, not new window
 
 
 ### Internet ###
+# Continue, not restart, on interrupted download
+alias wget='wget -c';
+
+# Use lynx browser to open DuckDuckGo search page 
 alias ddg='lynx https://duckduckgo.com/html';
 
 
@@ -67,8 +86,8 @@ alias desmume.jit="desmume --cpu-mode=1";    # dynamic recompilation (JIT)
 
 ### Misc. Apps ###
 alias ytdl="youtube-dl --abort-on-error --prefer-free-formats --restrict-filenames --no-overwrites --youtube-skip-dash-manifest";
-alias ytdl.a="ytdl -f 'bestaudio[acodec=vorbis]/best' -o '~/Music/%(title)s.%(acodec)s.%(ext)s'"
-alias ytdl.v="ytdl -f 'bestvideo[acodec=vorbis]/best' -o '~/Videos/%(title)s.%(acodec)s.%(vcodec)s.%(ext)s'"
+alias ytdl.a="ytdl -f 'bestaudio[acodec=vorbis]/best' -o '~/Music/%(title)s_%(acodec)s.%(ext)s'"
+alias ytdl.v="ytdl -f 'bestvideo[acodec=vorbis]/best' -o '~/Videos/%(title)s_%(acodec)s_%(vcodec)s.%(ext)s'"
 
 
 ### User-Defined Aliases ###
