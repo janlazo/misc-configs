@@ -85,9 +85,33 @@ alias desmume.jit="desmume --cpu-mode=1";    # dynamic recompilation (JIT)
 
 
 ### Misc. Apps ###
-alias ytdl="youtube-dl --abort-on-error --prefer-free-formats --restrict-filenames --no-overwrites --youtube-skip-dash-manifest";
-alias ytdl.a="ytdl -f 'bestaudio[acodec=vorbis]/best' -o '~/Music/%(title)s_%(acodec)s.%(ext)s'"
-alias ytdl.v="ytdl -f 'bestvideo[acodec=vorbis]/best' -o '~/Videos/%(title)s_%(acodec)s_%(vcodec)s.%(ext)s'"
+ytdl_args ()
+{
+    local ytdl_format;
+    local ytdl_folder;
+    local ytdl_file_pattern;
+
+    case $1 in
+    audio)
+        ytdl_format='bestaudio[acodec=vorbis]/bestaudio[container=webm]/best';
+        ytdl_folder='~/Music';
+        ytdl_file_pattern='%(title)s_%(acodec)s.%(ext)s';
+        ;;
+    video)
+        ytdl_format='bestvideo[acodec=vorbis]/bestvideo[container=webm]/best';
+        ytdl_folder='~/Videos';
+        ytdl_file_pattern='%(title)s_%(acodec)s_%(vcodec)s.%(ext)s';
+        ;;
+    esac;
+
+    echo "youtube-dl -f '$ytdl_format' -o '$ytdl_folder/$ytdl_file_pattern'";
+}
+
+alias ytdl=youtube-dl;
+alias ytdl.a="$( ytdl_args audio )";
+alias ytdl.v="$( ytdl_args video )";
+
+unset -f ytdl_args
 
 
 ### User-Defined Aliases ###
