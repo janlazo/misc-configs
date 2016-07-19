@@ -87,24 +87,24 @@ alias desmume.jit="desmume --cpu-mode=1";    # dynamic recompilation (JIT)
 ### Misc. Apps ###
 ytdl_args ()
 {
-    local ytdl_format;
-    local ytdl_folder;
-    local ytdl_file_pattern;
+    local format;
+    local folder;
+    local file_pattern;
 
     case $1 in
     audio)
-        ytdl_format='bestaudio[acodec=vorbis]/bestaudio[container=webm]/best';
-        ytdl_folder='~/Music';
-        ytdl_file_pattern='%(title)s_%(acodec)s.%(ext)s';
+        format='bestaudio[acodec=vorbis]/bestaudio[container=webm]/best';
+        folder='~/Music';
+        file_pattern='%(title)s_%(acodec)s.%(ext)s';
         ;;
     video)
-        ytdl_format='bestvideo[acodec=vorbis]/bestvideo[container=webm]/best';
-        ytdl_folder='~/Videos';
-        ytdl_file_pattern='%(title)s_%(acodec)s_%(vcodec)s.%(ext)s';
+        format='bestvideo[acodec=vorbis]/bestvideo[container=webm]/best';
+        folder='~/Videos';
+        file_pattern='%(title)s_%(acodec)s_%(vcodec)s.%(ext)s';
         ;;
     esac;
 
-    echo "youtube-dl -f '$ytdl_format' -o '$ytdl_folder/$ytdl_file_pattern'";
+    echo "youtube-dl -f '$format' -o '$folder/$file_pattern'";
 }
 
 alias ytdl=youtube-dl;
