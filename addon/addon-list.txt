@@ -1,0 +1,15 @@
+Cross-Browser Addons
+- privacy/security
+    - uBlock Origin       (general blocker)
+    - uMatrix             ("browser firewall")
+    - HTTPS Everywhere    (force https on sites w/ known certificates)
+
+Browser Exclusive Addons
+Firefox-based
+- privacy/security
+    - NoScript            (handle script-related security issues)
+    - Decentraleyes       (local js lib files -> faster page loads, avoid CDNs)
+- etc
+    - Tab Tree            (exactly what it says)
+      Tree Style Tabs
+    - Downthemall         ("torrent-style downloader")
