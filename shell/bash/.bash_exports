@@ -12,15 +12,14 @@ export LANGUAGE=en_US.UTF-8;
 ### Paths ###
 export PYTHONPATH=/usr/bin:/usr/local/bin;
 
-export JAVA_HOME=/usr/lib/jvm/default-java;
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$JAVA_HOME/lib;
-export CLASSPATH=$CLASSPATH:$LD_LIBRARY_PATH;
-
-export PATH=$PATH:$JAVA_HOME/bin;
-
 
 ### Misc. Environment Variables ###
-export GRAPHVIZ_DOT="/usr/bin/dot";
 
 
 ### User-Defined Exports ###
+#export JAVA_HOME=/usr/lib/jvm/default-java;
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$JAVA_HOME/lib;
+#export CLASSPATH=$CLASSPATH:$LD_LIBRARY_PATH;
+
+#export PATH=$PATH:$JAVA_HOME/bin;
+
