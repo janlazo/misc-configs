@@ -18,9 +18,11 @@ set ruler           "always show current position
 set showmatch       "Show matching brace
 set hlsearch        "Highlight when searching
 
-"syntax enable
-"highlight Search ctermbg=red
-"highlight Comment ctermfg=green guifg=green
+
+"""" Syntax """"
+if has('syntax')
+    source .vim/syntax.vim
+endif
 
 """" Tabs and Indents """"
 set nostartofline
