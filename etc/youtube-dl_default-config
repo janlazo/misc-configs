@@ -1,4 +1,4 @@
-# User Config to be saved as file 'config' in folder '~/.config/youtube-dl/'
+# User Config to be saved as file 'config' in folder '$HOME/.config/youtube-dl/'
 --verbose
 --abort-on-error
 --no-continue

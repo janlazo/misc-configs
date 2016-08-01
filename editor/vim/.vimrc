@@ -22,7 +22,7 @@ set hlsearch        "Highlight when searching
 """" Syntax """"
 if has('syntax')
     syntax enable
-    source ~/.vim/syntax/default.vim
+    source $HOME/.vim/syntax/default.vim
 endif
 
 """" Tabs and Indents """"

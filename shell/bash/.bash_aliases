@@ -94,12 +94,12 @@ ytdl_args ()
     case $1 in
     audio)
         format='bestaudio[acodec=vorbis]/bestaudio[container=webm]/best';
-        folder='~/Music';
+        folder='$HOME/Music';
         file_pattern='%(title)s_%(acodec)s.%(ext)s';
         ;;
     video)
         format='bestvideo[acodec=vorbis]/bestvideo[container=webm]/best';
-        folder='~/Videos';
+        folder='$HOME/Videos';
         file_pattern='%(title)s_%(acodec)s_%(vcodec)s.%(ext)s';
         ;;
     esac;
