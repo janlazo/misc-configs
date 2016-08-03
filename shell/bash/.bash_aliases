@@ -98,9 +98,9 @@ ytdl_args ()
         file_pattern='%(title)s_%(acodec)s.%(ext)s';
         ;;
     video)
-        format='best[acodec=vorbis]/best[ext=webm]/best';
+        format='best[vcodec=vp8.0]/best[ext=webm]/best';
         folder='$HOME/Videos';
-        file_pattern='%(title)s_%(acodec)s_%(vcodec)s.%(ext)s';
+        file_pattern='%(title)s_%(vcodec)s.%(ext)s';
         ;;
     esac;
 
