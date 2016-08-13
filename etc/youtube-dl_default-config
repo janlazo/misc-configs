@@ -6,3 +6,4 @@
 --prefer-free-formats
 --restrict-filenames
 --no-overwrites
+--default-search gvsearch
