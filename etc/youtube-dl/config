@@ -7,3 +7,4 @@
 --restrict-filenames
 --no-overwrites
 --default-search gvsearch
+-o '%(title)s_%(vcodec)s.%(ext)s'

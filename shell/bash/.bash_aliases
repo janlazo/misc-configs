@@ -94,17 +94,17 @@ ytdl_args ()
     case $1 in
     audio)
         format='bestaudio[acodec=vorbis]/bestaudio[ext=webm]/bestaudio';
-        folder='$HOME/Music';
+        folder="$HOME/Music";
         file_pattern='%(title)s_%(acodec)s.%(ext)s';
         ;;
     video)
         format='best[vcodec=vp8.0]/best[ext=webm]/best';
-        folder='$HOME/Videos';
+        folder="$HOME/Videos";
         file_pattern='%(title)s_%(vcodec)s.%(ext)s';
         ;;
     esac;
 
-    echo "youtube-dl -f '$format' -o '$folder/$file_pattern'";
+    echo youtube-dl -f "'$format'" -o "'$folder/$file_pattern'";
 }
 
 alias ytdl=youtube-dl;
