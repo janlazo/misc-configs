@@ -14,7 +14,6 @@
 #
 # Format
 #
---youtube-skip-dash-manifest
 --prefer-free-formats
 --merge-output-format webm
 #
@@ -23,10 +22,10 @@
 --restrict-filenames
 --no-overwrites
 --no-post-overwrites
---add-metadata
 --output '%(title)s.%(ext)s'
 #
 # Download
 #
+--youtube-skip-dash-manifest
 --no-playlist
 --default-search gvsearch
