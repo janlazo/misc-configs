@@ -1,14 +1,13 @@
 """" General """"
-set nocompatible    "ignore distro changes to vim
-set encoding=utf8   "vim default character encoding
+set nocompatible                    "ignore distro changes to vim
+set encoding=utf8                   "vim default character encoding
 set wildignore=*.o,*.obj,*.class    "wildcard ignores files with these ext
 
 
 """" VIM command line """"
-set wildmenu        "show all possible commands
+set wildmenu                    "show all possible commands
 set wildmode=longest:full,full  "TAB expands and cycles all possible commands
-set showcmd         "show latest command on last line
-"set cmdheight=2    "handle cmdline case 'press key to continue'
+set showcmd                     "show latest command on last line
 
 
 """" UI """"
@@ -22,8 +21,11 @@ set hlsearch        "Highlight when searching
 """" Syntax """"
 if has('syntax')
     syntax enable
+    filetype indent on
+
     source $HOME/.vim/syntax/default.vim
 endif
+
 
 """" Tabs and Indents """"
 set nostartofline
@@ -44,12 +46,18 @@ set linebreak
 set backspace=2     "0 (vi-compatible), 2 (backspace actually works)
 
 
-"""" Keybindings """"
-" \v opens the user's .vimrc
-map <silent> <leader>v :tabe! $MYVIMRC<CR>
+"""" Keybinds """"
+if has('keymap')
+    let mapleader='\' 
 
-"""" Buffers, Tabs, Windows """"
-map <leader>tn :tabnew <Space>
-map <leader>te :tabedit <Space>
-map <leader>to :tabonly<CR>
-map <leader>tc :tabclose<CR>
+    " \v opens the user's .vimrc
+    noremap <silent> <leader>v :tabedit $MYVIMRC<CR>
+    " remove trailing spaces
+    noremap <silent> <leader>s :%s/\s\+$//g<CR>
+
+    "" Buffers, Tabs, Windows ""
+    noremap <leader>tn :tabnew <Space>
+    noremap <leader>te :tabedit <Space>
+    noremap <leader>to :tabonly<CR>
+    noremap <leader>tc :tabclose<CR>
+endif
