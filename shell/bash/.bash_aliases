@@ -1,15 +1,16 @@
 ### Basic Shell Commands ###
 ## Color Commands ##
 # Color only if terminal can use it
-if test -t 1;
+if [ -t 1 ];
 then
     ncolors=$(tput colors);
 
-    if test -n "$ncolors" && test $ncolors -ge 8;
+    if [ -n "$ncolors" ] && [ $ncolors -ge 8 ];
     then
         # Alias command to have color argument by default
         alias ls='ls --color=auto';
         alias grep='grep --color=auto';
+        alias less='less -R';
 
         # Replace command with color counterpart
         if [ -x /usr/bin/colordiff ];
@@ -73,17 +74,27 @@ alias sysupd='su -c "apt-get update && apt-get autoclean"';
 alias sysupg='su -c "apt-get upgrade"';
 alias sysupgf='su -c "apt-get dist-upgrade && apt-get autoremove"';
 
-
 ### Version Control ###
 
 
 ### Editor ###
 if [ -x /usr/bin/vim ];
-then alias vim='vim -p';    # open file/s in tabs (default: 1 file/tab)
+then
+    # Use restricted mode and open multiple files in tabs (default: 1 file/tab)
+    alias vim='vim -Zp';
+    alias view='vim -R';
+
+    if [ -x /usr/bin/gvim ];
+    then
+        alias gvim='gvim -Zp';
+        alias gview='gvim -R';
+    fi;
 fi;
 
 if [ -x /usr/bin/emacs ];
-then alias emacs='emacs --no-window-system';    # open in terminal
+then
+    # open in terminal, not new window
+    alias emacs='emacs --no-window-system';
 fi;
 
 
@@ -113,7 +124,7 @@ fi;
 ### Misc. Apps ###
 # Assumed to be installed via pip
 if [ -x /usr/local/bin/youtube-dl ];
-then 
+then
     ytdl_args ()
     {
         local format;

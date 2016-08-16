@@ -1,6 +1,6 @@
 ### Text Editor ###
-export VISUAL=vim.tiny;
-export EDITOR=vim.tiny;
+export VISUAL=vim;
+export EDITOR=vim;
 
 
 ### Language Locales ###
@@ -10,16 +10,20 @@ export LANGUAGE=en_US.UTF-8;
 
 
 ### Paths ###
-export PYTHONPATH=/usr/bin:/usr/local/bin;
+export PYTHONPATH=$PYTHONPATH:/usr/bin:/usr/local/bin;
 
 
 ### Misc. Environment Variables ###
 
 
 ### User-Defined Exports ###
-#export JAVA_HOME=/usr/lib/jvm/default-java;
-#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$JAVA_HOME/lib;
-#export CLASSPATH=$CLASSPATH:$LD_LIBRARY_PATH;
+# TODO Update this after installing a Java Dev Toolkit (JDK)
+export JAVA_HOME=$JAVA_HOME;
 
-### Update the Path Variable ###
-#export PATH=$PATH:$JAVA_HOME/bin;
+if [ -n "$JAVA_HOME" ];
+then
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$JAVA_HOME/lib;
+    export CLASSPATH=$CLASSPATH:$LD_LIBRARY_PATH;
+
+    export PATH=$PATH:$JAVA_HOME/bin;
+fi;

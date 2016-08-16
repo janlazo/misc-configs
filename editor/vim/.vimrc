@@ -8,9 +8,11 @@ set wildignore=*.o,*.obj,*.class    "wildcard ignores files with these ext
 set wildmenu                    "show all possible commands
 set wildmode=longest:full,full  "TAB expands and cycles all possible commands
 set showcmd                     "show latest command on last line
+set cmdheight=2                 "handle cmdline case 'press key to continue'
 
 
 """" UI """"
+set background=dark
 set laststatus=2    "always show current file at bottom of screen
 set number          "show all line numbers
 set ruler           "always show current position
@@ -18,17 +20,20 @@ set showmatch       "Show matching brace
 set hlsearch        "Highlight when searching
 
 
+"""" Runtime Path """"
+
+
 """" Syntax """"
 if has('syntax')
-    syntax enable
-    filetype indent on
+    filetype plugin indent on
+    syntax on
 
-    source $HOME/.vim/syntax/default.vim
+    color default
 endif
 
 
 """" Tabs and Indents """"
-set nostartofline
+set nostartofline   "Stop moving cursor to 1st char when scrolling via jk
 set autoindent      "Adding next line maintains indent
 set nosmartindent
 
@@ -48,7 +53,7 @@ set backspace=2     "0 (vi-compatible), 2 (backspace actually works)
 
 """" Keybinds """"
 if has('keymap')
-    let mapleader='\' 
+    let mapleader='\'
 
     " \v opens the user's .vimrc
     noremap <silent> <leader>v :tabedit $MYVIMRC<CR>
