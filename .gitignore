@@ -3,44 +3,29 @@
 # Executables
 *.bin
 *.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-## Windows
 # Shared objects (inc. Windows DLLs)
 *.dll
 *.so
-*.so.*
-*.dylib
 
 ## C/C++
 # Definitions
 *.d
 # Object Files
-*.elf
-*.ko
 *.o
-*.obj
-# Precompiled Headers
-*.gch
-*.pch
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-.dylib
+
+## Python
+*.py[cod]
 
 ## Java
 *.class
 *.jar
+*.war
 
 ## Tex
 *.aux
 *.log
+# Intermediate
+*.dvi
 
 
 #### Compiled directories
@@ -50,14 +35,12 @@ dist/
 lib/
 
 
-#### Debug
-## C/C++
-*.dSYM/
-*.su
-
 #### Image files
 ## General
 *.iso
+# Must have a non-empty filename
+.pdf
+.ps
 
 ## Wireshark
 *.pcap
@@ -65,12 +48,31 @@ lib/
 
 #### Backup files
 ## General
+logs
 *~
 *.bak
+*.sav
+*.log
 
 ## Vim
-*.s[a-w][a-z]
+# Swap
+*[._]s[a-w][a-z]
+# Temporary
+.netrwhist
 
 
 #### Configs
 tags
+
+
+#### Other SCM
+## Mercurial
+.hg/
+.hgignore
+.hgsigs
+.hgsub
+.hgsubstate
+.hgtags
+
+## SVN
+.svn/
