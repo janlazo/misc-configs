@@ -13,6 +13,8 @@
 # Object Files
 *.o
 
+## Python
+*.py[cod]
 
 ## Java
 *.class
