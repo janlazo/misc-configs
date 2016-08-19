@@ -59,9 +59,17 @@ set formatoptions=crq
 
 
 """"""""""""""""""""""""""""""""
+" OS Fixes
+""""""""""""""""""""""""""""""""
+" Windows
+if has("win32") || has("win16")
+    set shellslash
+endif
+
+
+""""""""""""""""""""""""""""""""
 " Plugins
 """"""""""""""""""""""""""""""""
-" workaround for syntax plugins:
 " syntax [on|enable] before filetype and runtime
 if has('syntax')
     syntax on
@@ -73,10 +81,11 @@ if has('file_in_path') && has('find_in_path')
 
     if has('syntax')
         color default
-        set syntax=default
+        runtime bundle/default/indent/default.vim
     endif
 
     if has('keymap')
         set keymap=default
     endif
 endif
+
