@@ -19,7 +19,7 @@ set cmdheight=2                 "handle cmdline case 'press key to continue'
 """"""""""""""""""""""""""""""""
 " UI
 """"""""""""""""""""""""""""""""
-set background=dark "brighter colorscheme for dark background environments
+set background=light "colorscheme to handle bright screens
 
 set laststatus=2    "always show current file at bottom of screen
 set number          "show all line numbers
@@ -28,8 +28,14 @@ set ruler           "always show current position
 set showmatch       "Show matching brace
 set hlsearch        "Highlight when searching
 
-set wrap            "Line wrap
-set linebreak       "Break at last word of line
+
+""""""""""""""""""""""""""""""""
+" OS Fixes
+""""""""""""""""""""""""""""""""
+" Windows
+if has("win32") || has("win16")
+    set shellslash
+endif
 
 
 """"""""""""""""""""""""""""""""
@@ -46,25 +52,11 @@ set nostartofline   "Stop moving cursor to 1st char when scrolling via jk
 
 
 """"""""""""""""""""""""""""""""
-" Indentation
-""""""""""""""""""""""""""""""""
-set autoindent      "Adding next line maintains indent
-set nosmartindent   "Just be dumb and follow FFS
-
-
-""""""""""""""""""""""""""""""""
 " Formatting
 """"""""""""""""""""""""""""""""
-set formatoptions=crq
-
-
-""""""""""""""""""""""""""""""""
-" OS Fixes
-""""""""""""""""""""""""""""""""
-" Windows
-if has("win32") || has("win16")
-    set shellslash
-endif
+set formatoptions=tcr   " Auto-format text, comments (insert comment leader)
+set wrap                " Line wrap
+set linebreak           " Break at last word of line
 
 
 """"""""""""""""""""""""""""""""
@@ -75,17 +67,9 @@ if has('syntax')
     syntax on
 endif
 
-if has('file_in_path') && has('find_in_path')
+let use_plugin = has('autocmd') && has('syntax') && has('keymap')
+
+if use_plugin
     filetype plugin indent on
-    runtime vim-unbundle/plugin/unbundle.vim
-
-    if has('syntax')
-        color default
-        runtime bundle/default/indent/default.vim
-    endif
-
-    if has('keymap')
-        set keymap=default
-    endif
+    runtime bundle/vim-unbundle/plugin/unbundle.vim
 endif
-

@@ -1,8 +1,8 @@
 " General
 highlight Normal ctermfg=White guifg=Black
+
 highlight Comment ctermfg=DarkGreen guifg=DarkGreen
 highlight Todo ctermbg=DarkYellow guibg=DarkYellow
-highlight Error ctermbg=Red guibg=Red
 
 
 " Constants
@@ -21,14 +21,23 @@ highlight Structure ctermfg=Green guifg=Green
 highlight Typedef ctermfg=Green guifg=Green
 
 
-" Generic for the Rest
+" Statement
+highlight Statement ctermfg=Yellow guifg=DarkYellow
+highlight Operator ctermfg=DarkCyan guifg=DarkCyan
+
+
+" Generic for the Rest of the Code
 highlight Identifier ctermfg=DarkCyan guifg=DarkCyan
 highlight PreProc ctermfg=Magenta guifg=Magenta
-highlight Statement ctermfg=Yellow guifg=Yellow
 highlight Special ctermfg=DarkMagenta guifg=DarkMagenta
 
 
 " Functionality
 highlight Cursor ctermbg=White guibg=Black
-highlight Search ctermbg=Yellow guibg=Yellow
+highlight ColorColumn ctermbg=Grey guibg=DarkGrey
+
+highlight Search ctermbg=Yellow guibg=DarkYellow
+highlight MatchParen ctermbg=Yellow guibg=DarkYellow
+
+highlight Error ctermbg=Red guibg=Red
 highlight ErrorMsg ctermbg=Red guibg=Red
