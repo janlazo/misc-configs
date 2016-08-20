@@ -1,4 +1,4 @@
-let mapleader='\'
+let mapleader="\<space>"
 
 " \v opens the user's .vimrc
 noremap <silent> <leader>v :tabedit $MYVIMRC<CR>
