@@ -7,4 +7,6 @@ if has("keymap")
     set keymap=default
 endif
 
-autocmd FileType * runtime bundle/default/after/default.vim
+if has("autocmd")
+    autocmd FileType * runtime bundle/default/after/default.vim
+endif
