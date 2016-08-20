@@ -1,3 +1,7 @@
+if !has("keymap")
+    return
+endif
+
 let mapleader="\<space>"
 
 " \v opens the user's .vimrc

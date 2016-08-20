@@ -1,12 +1,13 @@
 if has("syntax")
     colorscheme default
-    runtime bundle/default/indent/default.vim
 endif
+
+runtime indent/default.vim
 
 if has("keymap")
     set keymap=default
 endif
 
 if has("autocmd")
-    autocmd FileType * runtime bundle/default/after/default.vim
+    autocmd FileType * runtime after/default.vim
 endif
