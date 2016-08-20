@@ -3,8 +3,6 @@
 """"""""""""""""""""""""""""""""
 set nocompatible                "ignore distro changes to vim
 set encoding=utf8               "vim default character encoding
-set visualbell                  "don't beep
-set noerrorbells                "I'm serious
 
 
 """"""""""""""""""""""""""""""""
@@ -54,9 +52,8 @@ set nostartofline   "Stop moving cursor to 1st char when scrolling via jk
 """"""""""""""""""""""""""""""""
 " Formatting
 """"""""""""""""""""""""""""""""
-set formatoptions=tcr   " Auto-format text, comments (insert comment leader)
-set wrap                " Line wrap
-set linebreak           " Break at last word of line
+set formatoptions+=cr  " Auto-format comments
+set wrap               " Line wrap
 
 
 """"""""""""""""""""""""""""""""
@@ -67,9 +64,15 @@ if has('syntax')
     syntax on
 endif
 
-let use_plugin = has('autocmd') && has('syntax') && has('keymap')
+let s:use_plugin = has('autocmd') && has('syntax') && has('keymap')
 
-if use_plugin
+if s:use_plugin
     filetype plugin indent on
     runtime bundle/vim-unbundle/plugin/unbundle.vim
 endif
+
+
+""""""""""""""""""""""""""""""""
+" Clean-up
+""""""""""""""""""""""""""""""""
+unlet s:use_plugin
