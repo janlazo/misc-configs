@@ -1,30 +1,31 @@
 """"""""""""""""""""""""""""""""
 " General
 """"""""""""""""""""""""""""""""
-set nocompatible                "ignore distro changes to vim
-set encoding=utf8               "vim default character encoding
+set nocompatible                " ignore distro changes to vim
+set encoding=utf8               " vim default character encoding
 
 
 """"""""""""""""""""""""""""""""
 " VIM command line
 """"""""""""""""""""""""""""""""
-set wildmenu                    "show all possible commands
-set wildmode=longest:full,full  "TAB expands, cycles all possible commands
-set showcmd                     "show latest command on last line
-set cmdheight=2                 "handle cmdline case 'press key to continue'
+set wildmenu                    " show all possible commands
+set wildmode=longest:full,full  " TAB expands, cycles all possible commands
+set showcmd                     " show latest command on last line
+set cmdheight=2                 " handle 'press key to continue' in cmdline
 
 
 """"""""""""""""""""""""""""""""
 " UI
 """"""""""""""""""""""""""""""""
-set background=light "colorscheme to handle bright screens
+set background=light        " colorscheme to handle bright screens
 
-set laststatus=2    "always show current file at bottom of screen
-set number          "show all line numbers
-set ruler           "always show current position
+set statusline+=\ [%{&fo}]  " add formatting options in statusline
+set laststatus=2            " always show current file in status line
+set number                  " show all line numbers
+set ruler                   " always show current position
 
-set showmatch       "Show matching brace
-set hlsearch        "Highlight when searching
+set showmatch               " Show matching brace
+set hlsearch                " Highlight when searching
 
 
 """"""""""""""""""""""""""""""""
@@ -39,21 +40,14 @@ endif
 """"""""""""""""""""""""""""""""
 " Keyboard fixes
 """"""""""""""""""""""""""""""""
-set backspace=2         "0 (vi-compatible), 2 (backspace actually works)
-set whichwrap+=<,>,h,l  "Left,Right arrows and 'h','l' keys wrap
+set backspace=2         " 0 (vi-compatible), 2 (backspace actually works)
+set whichwrap+=<,>,h,l  " Left,Right arrows and 'h','l' keys wrap
 
 
 """"""""""""""""""""""""""""""""
 " Cursor fixes
 """"""""""""""""""""""""""""""""
-set nostartofline   "Stop moving cursor to 1st char when scrolling via jk
-
-
-""""""""""""""""""""""""""""""""
-" Formatting
-""""""""""""""""""""""""""""""""
-set formatoptions+=cr  " Auto-format comments
-set wrap               " Line wrap
+set nostartofline       " Don't move cursor to col 1 when scrolling
 
 
 """"""""""""""""""""""""""""""""
@@ -71,8 +65,4 @@ if s:use_plugin
     runtime bundle/vim-unbundle/plugin/unbundle.vim
 endif
 
-
-""""""""""""""""""""""""""""""""
-" Clean-up
-""""""""""""""""""""""""""""""""
 unlet s:use_plugin

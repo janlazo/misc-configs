@@ -1,7 +1,8 @@
-set textwidth=80
+set wrap            " soft line wrap for existing code
+set textwidth=80    " hard line wrap
 
 if exists("+colorcolumn")
-    set colorcolumn=80
+    set colorcolumn=80  " Highlight col 80
 endif 
 
 set autoindent      "Adding next line maintains indent
