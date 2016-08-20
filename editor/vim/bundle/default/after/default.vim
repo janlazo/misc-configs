@@ -1,4 +1,4 @@
 """"""""""""""""""""""""""""""""
 " Formatting
 """"""""""""""""""""""""""""""""
-setlocal formatoptions=ro
+set formatoptions=ro
