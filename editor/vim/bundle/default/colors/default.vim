@@ -1,7 +1,3 @@
-if !has("syntax")
-    return
-endif
-
 " General
 highlight Normal ctermfg=White guifg=Black
 

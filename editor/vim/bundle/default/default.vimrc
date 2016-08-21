@@ -56,9 +56,13 @@ set nostartofline       " Don't move cursor to col 1 when scrolling
 " syntax [on|enable] before filetype and runtime
 if has('syntax')
     syntax on
-
-    if has("autocmd")
-        runtime bundle/vim-unbundle/plugin/unbundle.vim
-        filetype plugin indent on
-    endif
 endif
+
+let s:use_plugin = has('autocmd') && has('syntax') && has('keymap')
+
+if s:use_plugin
+    filetype plugin indent on
+    runtime bundle/vim-unbundle/plugin/unbundle.vim
+endif
+
+unlet s:use_plugin
