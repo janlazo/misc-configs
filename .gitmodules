@@ -1,3 +1,4 @@
 [submodule "editor/vim-config.git"]
 	path = editor/vim-config.git
 	url = https://github.com/janlazo/vim-config.git
+	branch = master

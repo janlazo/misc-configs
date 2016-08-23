@@ -3,7 +3,7 @@
 [credential]
 	helper = cache
 [core]
-	editor = vi
+	editor = vim
 	filemode = false
 [color]
 	ui = true
@@ -12,20 +12,32 @@
 [url "https://bitbucket.org/"]
 	insteadOf = bb:
 [alias]
+	# Fix the repo
+	fuck = reset HEAD --hard
+
+	# General
 	st = status -s
 	cf = config
 	rb = rebase
-	srb = svn rebase
-	fuck = reset HEAD --hard
 	pl = pull
 	df = diff
 	co = checkout
 	ph = push
 	mg = merge
 	br = branch
-	sbr = svn branch
 	cm = commit
-	scm = svn dcommit
 	clo = clone
+	l = log --graph --decorate
+
+	# Submodules
+	sub = submodule
+	subst = submodule status --recursive
+	subi = submodule init
+	subdi = submodule deinit --force
+	subup = submodule update --init --recursive
+
+	# SVN
+	srb = svn rebase
+	sbr = svn branch
+	scm = svn dcommit
 	sclo = svn clone
-    l = log --graph --decorate
