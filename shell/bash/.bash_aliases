@@ -36,6 +36,10 @@ alias rgrep.v='grep.v -r';
 alias fgrep.v='grep.v -F';
 alias egrep.v='grep.v -E';
 
+# Wrap
+alias less.w='less --chop-long-lines';
+
+
 ## Non-color Commands ##
 # Verbose
 alias rm='rm -v';
@@ -74,18 +78,21 @@ alias sysupd='su -c "apt-get update && apt-get autoclean"';
 alias sysupg='su -c "apt-get upgrade"';
 alias sysupgf='su -c "apt-get dist-upgrade && apt-get autoremove"';
 
+
 ### Version Control ###
 
 
 ### Editor ###
 if [ -x /usr/bin/vim ];
 then
-    # Use restricted mode and open multiple files in tabs (default: 1 file/tab)
+    # Use restricted mode
+    # Open multiple files in tabs (default: 1 file/tab)
     alias vim='vim -Zp';
     alias view='vim -R';
 
     if [ -x /usr/bin/gvim ];
     then
+        # Do the same for gvim
         alias gvim='gvim -Zp';
         alias gview='gvim -R';
     fi;
@@ -93,7 +100,7 @@ fi;
 
 if [ -x /usr/bin/emacs ];
 then
-    # open in terminal, not new window
+    # open in current terminal, not new window
     alias emacs='emacs --no-window-system';
 fi;
 
