@@ -1,6 +1,6 @@
 {
-  "timeStamp": 1469305285634,
-  "version": "1.7.6",
+  "timeStamp": 1472450111213,
+  "version": "1.9.2",
   "userSettings": {
     "advancedUserEnabled": true,
     "autoUpdate": true,
@@ -12,6 +12,7 @@
     "externalLists": "! Examples:\n! https://easylist-downloads.adblockplus.org/fb_annoyances_full.txt\n! https://easylist-downloads.adblockplus.org/yt_annoyances_full.txt\n",
     "firewallPaneMinimized": true,
     "hyperlinkAuditingDisabled": true,
+    "ignoreGenericCosmeticFilters": false,
     "largeMediaSize": 1024,
     "parseAllABPHideFilters": false,
     "prefetchingDisabled": true,
@@ -49,8 +50,8 @@
       "title": "EasyList without element hiding rules",
       "group": "ads",
       "supportURL": "https://forums.lanik.us/",
-      "entryCount": 25922,
-      "entryUsedCount": 25846
+      "entryCount": 26386,
+      "entryUsedCount": 26310
     },
     "assets/thirdparties/easylist-downloads.adblockplus.org/easyprivacy.txt": {
       "title": "EasyPrivacy",
@@ -58,38 +59,38 @@
       "homeURL": "https://easylist.to/easylist/easyprivacy.txt",
       "supportURL": "https://forums.lanik.us/",
       "off": false,
-      "entryCount": 11807,
-      "entryUsedCount": 11754
+      "entryCount": 11909,
+      "entryUsedCount": 11854
     },
     "https://easylist-downloads.adblockplus.org/fanboy-annoyance.txt": {
       "off": false,
       "title": "Fanboy’s Annoyance List",
       "group": "social",
       "supportURL": "https://forums.lanik.us/",
-      "entryCount": 23659,
-      "entryUsedCount": 1099
+      "entryCount": 23929,
+      "entryUsedCount": 1106
     },
     "https://easylist-downloads.adblockplus.org/fanboy-social.txt": {
       "off": false,
       "title": "Fanboy’s Social Blocking List",
       "group": "social",
       "supportURL": "https://forums.lanik.us/",
-      "entryCount": 14023,
-      "entryUsedCount": 3693
+      "entryCount": 14138,
+      "entryUsedCount": 3701
     },
     "https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt": {
       "off": false,
       "title": "Malvertising filter list by Disconnect",
       "group": "malware",
-      "entryCount": 5714,
-      "entryUsedCount": 344
+      "entryCount": 5689,
+      "entryUsedCount": 358
     },
     "https://s3.amazonaws.com/lists.disconnect.me/simple_malware.txt": {
       "off": false,
       "title": "Malware filter list by Disconnect",
       "group": "malware",
-      "entryCount": 2978,
-      "entryUsedCount": 170
+      "entryCount": 2953,
+      "entryUsedCount": 143
     },
     "https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt": {
       "off": false,
@@ -103,16 +104,16 @@
       "title": "Adblock Warning Removal List",
       "group": "ads",
       "supportURL": "https://forums.lanik.us/",
-      "entryCount": 209,
-      "entryUsedCount": 54
+      "entryCount": 226,
+      "entryUsedCount": 56
     },
     "http://malwaredomains.lehigh.edu/files/immortal_domains.txt": {
       "off": false,
       "title": "Malware domains (long-lived)",
       "group": "malware",
       "supportURL": "http://www.malwaredomains.com/",
-      "entryCount": 1194,
-      "entryUsedCount": 34
+      "entryCount": 3207,
+      "entryUsedCount": 2412
     },
     "assets/thirdparties/mirror1.malwaredomains.com/files/justdomains": {
       "title": "Malware domains",
@@ -120,8 +121,8 @@
       "homeURL": "https://mirror.cedia.org.ec/malwaredomains/justdomains",
       "supportURL": "http://www.malwaredomains.com/",
       "off": false,
-      "entryCount": 24654,
-      "entryUsedCount": 24581
+      "entryCount": 23103,
+      "entryUsedCount": 23019
     },
     "assets/thirdparties/pgl.yoyo.org/as/serverlist": {
       "title": "Peter Lowe’s Ad server list",
@@ -129,8 +130,8 @@
       "homeURL": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext",
       "supportURL": "https://pgl.yoyo.org/adservers/",
       "off": false,
-      "entryCount": 2383,
-      "entryUsedCount": 2382
+      "entryCount": 2371,
+      "entryUsedCount": 2370
     },
     "https://raw.githubusercontent.com/reek/anti-adblock-killer/master/anti-adblock-killer-filters.txt": {
       "off": false,
@@ -138,45 +139,45 @@
       "group": "ads",
       "supportURL": "https://github.com/reek/anti-adblock-killer",
       "instructionURL": "https://github.com/reek/anti-adblock-killer#instruction",
-      "entryCount": 2006,
-      "entryUsedCount": 1088
+      "entryCount": 2009,
+      "entryUsedCount": 1114
     },
     "https://raw.githubusercontent.com/Dawsey21/Lists/master/adblock-list.txt": {
       "off": false,
       "title": "Spam404",
       "group": "malware",
       "supportURL": "http://www.spam404.com/",
-      "entryCount": 5470,
-      "entryUsedCount": 5301
+      "entryCount": 5483,
+      "entryUsedCount": 5314
     },
     "https://www.fanboy.co.nz/enhancedstats.txt": {
       "off": false,
       "title": "Fanboy’s Enhanced Tracking List",
       "group": "privacy",
       "supportURL": "https://forums.lanik.us/",
-      "entryCount": 989,
-      "entryUsedCount": 944
+      "entryCount": 1000,
+      "entryUsedCount": 949
     },
     "https://www.fanboy.co.nz/fanboy-antifacebook.txt": {
       "off": false,
       "title": "Anti-ThirdpartySocial (see warning inside list)",
       "group": "social",
       "supportURL": "https://forums.lanik.us/",
-      "entryCount": 64,
-      "entryUsedCount": 63
+      "entryCount": 65,
+      "entryUsedCount": 64
     },
     "assets/thirdparties/www.malwaredomainlist.com/hostslist/hosts.txt": {
       "title": "Malware Domain List",
       "group": "malware",
       "homeURL": "https://www.malwaredomainlist.com/hostslist/hosts.txt",
       "off": false,
-      "entryCount": 1212,
-      "entryUsedCount": 1212
+      "entryCount": 1226,
+      "entryUsedCount": 1226
     }
   },
   "netWhitelist": "about-scheme\nbehind-the-scene\nchrome-extension-scheme\nchrome-scheme\nloopconversation.about-scheme\nopera-scheme",
   "dynamicFilteringString": "behind-the-scene * 3p-frame noop\nbehind-the-scene * 3p noop",
   "urlFilteringString": "",
-  "hostnameSwitchesString": "no-cosmetic-filtering: * true\nno-remote-fonts: * true\nno-large-media: * true",
+  "hostnameSwitchesString": "no-cosmetic-filtering: * true\nno-remote-fonts: * true\nno-large-media: * true\nno-large-media: www.youtube.com false",
   "userFilters": ""
 }
