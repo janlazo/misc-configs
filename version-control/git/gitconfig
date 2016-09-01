@@ -4,7 +4,6 @@
 	helper = cache
 [core]
 	editor = vim
-	filemode = false
 [color]
 	ui = true
 [url "https://github.com/"]
@@ -19,7 +18,7 @@
 	st = status -s
 	cf = config
 	rb = rebase
-	pl = pull
+	pl = pull --rebase
 	df = diff
 	co = checkout
 	ph = push
@@ -28,6 +27,7 @@
 	cm = commit
 	clo = clone
 	l = log --graph --decorate
+	la = log --graph --decorate --all
 
 	# Submodules
 	sub = submodule
@@ -41,3 +41,5 @@
 	sbr = svn branch
 	scm = svn dcommit
 	sclo = svn clone
+[status]
+	submodulesummary = true
