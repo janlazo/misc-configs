@@ -41,10 +41,10 @@ alias less.w='less --chop-long-lines';
 
 
 ## Non-color Commands ##
-# Verbose
-alias rm='rm -v';
-alias cp='cp -v';
-alias mv='mv -v';
+# Verbose, and if possible, make it harder to delete/overwrite files
+alias rm='rm -v -I --preserve-root';
+alias cp='cp -v --no-clobber';
+alias mv='mv -v --no-clobber';
 alias ln='ln -v';
 alias mkdir='mkdir -v';
 alias tar='tar -v --totals --block-number';
@@ -55,13 +55,6 @@ alias df='df -hk --print-type';
 
 # Create parent directories if necessary
 alias mkdir.p='mkdir -p';
-
-# Single prompt before recursion and don't delete root
-alias rm.safe='rm -I --preserve-root';
-
-# Don't overwrite existing file
-alias cp.safe='cp --no-clobber';
-alias mv.safe='mv --no-clobber';
 
 # Create/Extract (compressed) archives
 alias tar.c='tar -c --verify -f';   # tar.c <archive.tar> <files>
@@ -96,6 +89,14 @@ then
         alias gvim='gvim -Zp';
         alias gview='gvim -R';
     fi;
+fi;
+
+if [ -x /usr/bin/nvim ];
+then
+    # Use restricted mode
+    # Open multiple files in tabs (default: 1 file/tab)
+    alias nvim='nvim -Zp';
+    alias nview='nvim -R';
 fi;
 
 if [ -x /usr/bin/emacs ];
