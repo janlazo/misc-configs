@@ -78,24 +78,22 @@ alias sysupgf='su -c "apt-get dist-upgrade && apt-get autoremove"';
 ### Editor ###
 if [ -x /usr/bin/vim ];
 then
-    # Use restricted mode
     # Open multiple files in tabs (default: 1 file/tab)
-    alias vim='vim -Zp';
+    alias vim='vim -p';
     alias view='vim -R';
 
     if [ -x /usr/bin/gvim ];
     then
         # Do the same for gvim
-        alias gvim='gvim -Zp';
+        alias gvim='gvim -p';
         alias gview='gvim -R';
     fi;
 fi;
 
 if [ -x /usr/bin/nvim ];
 then
-    # Use restricted mode
     # Open multiple files in tabs (default: 1 file/tab)
-    alias nvim='nvim -Zp';
+    alias nvim='nvim -p';
     alias nview='nvim -R';
 fi;
 
