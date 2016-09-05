@@ -2,3 +2,7 @@
 	path = editor/vim-config.git
 	url = https://github.com/janlazo/vim-config.git
 	branch = master
+[submodule "editor/nvim-config.git"]
+	path = editor/nvim-config.git
+	url = https://github.com/janlazo/vim-config.git
+	branch = nvim
