@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ## Script Variables
-REPODIR=$(pwd);
+REPO_D=$(pwd);
 USER_SHELL=$(getent passwd $LOGNAME | cut -d : -f 7);
 USE_BASH=$(test "$USER_SHELL" = "/bin/bash");
 
@@ -17,30 +17,32 @@ then
     #### TODO: Save the affected files in a backup directory
     # Bash
     if $USE_BASH;
-    then cp shell/bash/* $HOME;
+    then
+        BASH_D=$REPO_D/shell/bash;
+
+        cp $BASH_D/.bashrc $HOME;
+        cp $BASH_D/.bash_exports $HOME;
+        cp $BASH_D/.bash_aliases $HOME;
     fi;
 
     # Git
-    cp version-control/git/gitconfig $HOME/.gitconfig;
-    cp .gitignore $HOME;
+    cp $REPO_D/version-control/git/gitconfig $HOME/.gitconfig;
+    cp $REPO_D/.gitignore $HOME
     git config --global core.excludesfile $HOME/.gitignore;
 
     # Vim
-    git clone --local $REPODIR/editor/vim-config.git $HOME/.vim;
+    ln -s $REPO_D/editor/vim-config.git $HOME/.vim;
 
     # Neovim
-    git clone --local $REPODIR/editor/vim-config.git $HOME/.config/nvim;
-    cd $HOME/.config/nvim;
-    git checkout nvim;
-    cd $REPODIR;
+    ln -s $REPO_D/editor/nvim-config.git $HOME/.config/nvim;
 
     # Ctags
-    cp $REPODIR/editor/ctags/.ctags $HOME;
-    cp $REPODIR/editor/ctags/.ctagsignore $HOME;
+    cp $REPO_D/editor/ctags/.ctags $HOME;
+    cp $REPO_D/editor/ctags/.ctagsignore $HOME;
     printf "--exclude=@""$HOME"".ctagsignore" >> $HOME/.ctags;
 
     # youtube-dl
-    cp -r $REPODIR/etc/youtube-dl $HOME/.config/;
+    cp -r $REPO_D/etc/youtube-dl $HOME/.config/;
 fi;
 
 
