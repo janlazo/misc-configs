@@ -22,6 +22,8 @@
 	df = diff
 	co = checkout
 	ph = push
+	pha = push --all
+	phf = push --force-with-lease
 	mg = merge
 	br = branch
 	cm = commit
@@ -30,7 +32,6 @@
 	la = log --graph --decorate --all
 
 	# Submodules
-	sub = submodule
 	subst = submodule status --recursive
 	subi = submodule init
 	subdi = submodule deinit --force
