@@ -35,8 +35,8 @@
 	br = branch
 	cm = commit
 	clo = clone
-	l = log --graph --decorate
-	la = log --graph --decorate --all
+	l = log --graph --decorate --oneline
+	la = log --graph --decorate --oneline --all
 
 	# Submodules
 	subst = submodule status --recursive
