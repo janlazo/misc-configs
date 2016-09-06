@@ -13,17 +13,24 @@
 [alias]
 	# Fix the repo
 	fuck = reset HEAD --hard
+	undo = reset HEAD
 
 	# General
 	st = status -s
+	stat = status
 	cf = config
 	rb = rebase
+	rba = rebase --abort
+	rbc = rebase --continue
+	rbs = rebase --skip
 	pl = pull --rebase
 	df = diff
+	dfc = diff --cached
 	co = checkout
 	ph = push
 	pha = push --all
 	phf = push --force-with-lease
+	phfa = push --force-with-lease --all
 	mg = merge
 	br = branch
 	cm = commit
