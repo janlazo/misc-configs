@@ -31,10 +31,10 @@ then
     git config --global core.excludesfile $HOME/.gitignore;
 
     # Vim
-    ln -s $REPO_D/editor/vim-config.git $HOME/.vim;
+    ln -s $REPO_D/editor/dotvim.git $HOME/.vim;
 
     # Neovim
-    ln -s $REPO_D/editor/nvim-config.git $HOME/.config/nvim;
+    ln -s $REPO_D/editor/dotnvim.git $HOME/.config/nvim;
 
     # Ctags
     cp $REPO_D/editor/ctags/.ctags $HOME;
