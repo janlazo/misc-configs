@@ -17,32 +17,34 @@
 
 	# General
 	st = status -s
-	stat = status
 	cf = config
 	rb = rebase
-	rba = rebase --abort
-	rbc = rebase --continue
-	rbs = rebase --skip
+	rb-a = rebase --abort
+	rb-c = rebase --continue
+	rb-s = rebase --skip
 	pl = pull --rebase
 	df = diff
-	dfc = diff --cached
+	df-c = diff --cached
 	co = checkout
 	ph = push
-	pha = push --all
-	phf = push --force-with-lease
-	phfa = push --force-with-lease --all
+	ph-a = push --all
+	ph-f = push --force-with-lease
+	ph-fa = push --force-with-lease --all
 	mg = merge
 	br = branch
 	cm = commit
 	clo = clone
 	l = log --graph --decorate --oneline
-	la = log --graph --decorate --oneline --all
+	l-a = log --graph --decorate --oneline --all
 
 	# Submodules
-	subst = submodule status --recursive
-	subi = submodule init
-	subdi = submodule deinit --force
-	subup = submodule update --init --recursive
+	subm = submodule
+	subma = submodule add
+	submst = submodule status --recursive
+	submi = submodule init
+	submdi = submodule deinit --force
+	submup = submodule update --init --recursive
+	submup-r = submodule update --init --recursive --remote
 
 	# SVN
 	srb = svn rebase
