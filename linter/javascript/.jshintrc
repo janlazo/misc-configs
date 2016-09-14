@@ -1,0 +1,24 @@
+{
+    "bitwise": true,
+    "curly": true,
+    "eqeqeq": true,
+    "esversion": 5,
+    "freeze": true,
+    "funcscope": true,
+    "maxdepth": 3, 
+    "maxerr": 1000,
+    "maxparams": 8,
+    "maxstatements": 1000,
+    "noarg": true,
+    "nonbsp": true,
+    "notypeof": true,
+    "shadow": true,
+    "unused": "vars",
+
+    "lastsemic": true,
+    "loopfunc": true,
+    "plusplus": false,
+    "proto": true
+    
+
+} 
