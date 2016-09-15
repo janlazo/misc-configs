@@ -3,22 +3,32 @@
     "curly": true,
     "eqeqeq": true,
     "esversion": 5,
+    "forin": true,
     "freeze": true,
     "funcscope": true,
-    "maxdepth": 3, 
+    "maxdepth": 3,
     "maxerr": 1000,
-    "maxparams": 8,
+    "maxparams": 6,
     "maxstatements": 1000,
     "noarg": true,
     "nonbsp": true,
     "notypeof": true,
     "shadow": true,
+    "strict": false,
     "unused": "vars",
 
+    "asi": true,
+    "boss": true,
+    "evil": true,
     "lastsemic": true,
     "loopfunc": true,
+    "moz": false,
     "plusplus": false,
-    "proto": true
-    
+    "scripturl": true,
 
-} 
+    "browser": true,
+    "jquery": true,
+    "node": true,
+    "phantom": true,
+    "typed": true
+}
