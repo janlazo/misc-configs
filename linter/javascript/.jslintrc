@@ -1,0 +1,25 @@
+{
+    "predef": [
+        "angular",
+        "$"
+    ],
+
+    "color": true,
+    "terse": true,
+    "todo": true,
+    "maxerr": 100,
+    "maxlen": 120,
+
+    "indent": 4,
+    "plusplus": true,
+    "sloppy": true,
+    "unparam": true,
+    "undef": true,
+    "white": true,
+    "vars": true,
+
+    "anon": true,
+    "browser": true,
+    "es5": true,
+    "node":true
+}

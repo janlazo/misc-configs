@@ -105,13 +105,7 @@ fi;
 
 
 ### Languages ###
-if [ -x /usr/local/bin/jslint ]
-    alias jslint.mercy="jslint \
-        --color --terse  \
-        --indent --plusplus --predef --sloppy --unparam --vars --undef --white \
-        --anon --browser --es5 --node --todo \
-        ";
-fi;
+
 
 ### Internet ###
 # Continue, not restart, on interrupted download
