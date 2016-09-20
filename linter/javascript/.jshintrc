@@ -1,4 +1,8 @@
 {
+    "globals": {
+        "angular": false
+    },
+
     "bitwise": true,
     "curly": true,
     "eqeqeq": true,
