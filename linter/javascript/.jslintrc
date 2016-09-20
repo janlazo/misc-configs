@@ -1,7 +1,8 @@
 {
     "predef": [
+        "$",
         "angular",
-        "$"
+        "jquery"
     ],
 
     "color": true,
