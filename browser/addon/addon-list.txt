@@ -15,6 +15,7 @@ Firefox-based
 - privacy/security
     - NoScript              (handle script-related security issues)
     - Decentraleyes         (local js lib files -> avoid CDNs)
+    - Privacy Settings      (convenient toggles for about:config options)
 - testing
     - Selenium IDE          (automate user-simulated test cases)
 - etc   
