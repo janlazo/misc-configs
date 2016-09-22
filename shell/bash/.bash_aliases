@@ -79,13 +79,11 @@ alias sysupgf='su -c "apt-get dist-upgrade && apt-get autoremove"';
 if [ -x /usr/bin/vim ];
 then
     # Open multiple files in tabs (default: 1 file/tab)
-    alias vim='vim -p';
     alias view='vim -R';
 
     if [ -x /usr/bin/gvim ];
     then
         # Do the same for gvim
-        alias gvim='gvim -p';
         alias gview='gvim -R';
     fi;
 fi;
@@ -93,7 +91,6 @@ fi;
 if [ -x /usr/bin/nvim ];
 then
     # Open multiple files in tabs (default: 1 file/tab)
-    alias nvim='nvim -p';
     alias nview='nvim -R';
 fi;
 
