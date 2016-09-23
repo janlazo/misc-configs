@@ -1,5 +1,12 @@
+tags
+
 *.bin
 *.exe
+*.iso
+*.pcap
+*.pdf
+*.ps
+*.txt
 
 *.dll
 *.so
@@ -17,40 +24,30 @@
 *.log
 *.dvi
 
-bin/
-dist/
-lib/
-
-*.iso
-
-.pdf
-.ps
-
-*.pcap
-
+bin
+dist
+lib
+node_modules
+vendor
 logs
 
-*~
 *.bak
 *.sav
-*.log
 
-*[._]s[a-w][a-z]
+.*.s[a-w][a-z]
 .netrwhist
 
-tags
-
-.git/
+.git
 .gitignore
 .gitmodules
 
-.hg/
+.hg
 .hgignore
 .hgsigs
 .hgsub
 .hgsubstate
 .hgtags
 
-.svn/
+.svn
 
-.accurev/
+.accurev
