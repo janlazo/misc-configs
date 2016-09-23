@@ -13,43 +13,43 @@
 [alias]
 	# Fix the repo
 	fuck = reset HEAD --hard
-	undo = reset HEAD
+	fix = git rebase -i HEAD~1
 
 	# General
 	st = status -s
 	cf = config
 	rb = rebase
-	rb-a = rebase --abort
-	rb-c = rebase --continue
-	rb-s = rebase --skip
+	rba = rebase --abort
+	rbc = rebase --continue
+	rbs = rebase --skip
 	pl = pull --rebase
 	df = diff
-	df-c = diff --cached
+	dfc = diff --cached
 	co = checkout
 	ph = push
-	ph-a = push --all
-	ph-f = push --force-with-lease
-	ph-fa = push --force-with-lease --all
+	pha = push --all
+	phf = push --force-with-lease
+	phfa = push --force-with-lease --all
 	mg = merge
 	br = branch
 	cm = commit
 	clo = clone
 	l = log --graph --decorate --oneline
-	l-a = log --graph --decorate --oneline --all
+	la = log --graph --decorate --oneline --all
 
 	# Submodules
 	subm = submodule
-	subma = submodule add
-	submst = submodule status --recursive
-	submi = submodule init
-	submdi = submodule deinit --force
-	submup = submodule update --init --recursive
-	submup-r = submodule update --init --recursive --remote
+	subm-a = submodule add
+	subm-st = submodule status --recursive
+	subm-i = submodule init
+	subm-di = submodule deinit --force
+	subm-up = submodule update --init --recursive
+	subm-upr = submodule update --init --recursive --remote
 
 	# SVN
-	srb = svn rebase
-	sbr = svn branch
-	scm = svn dcommit
-	sclo = svn clone
+	s-rb = svn rebase
+	s-br = svn branch
+	s-cm = svn dcommit
+	s-clo = svn clone
 [status]
 	submodulesummary = true
