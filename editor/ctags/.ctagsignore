@@ -1,5 +1,16 @@
 tags
 
+
+bin
+dist
+target
+
+assets
+vendor
+
+node_modules
+
+
 *.bin
 *.exe
 *.iso
@@ -24,22 +35,22 @@ tags
 *.log
 *.dvi
 
-bin
-dist
-lib
-node_modules
-vendor
-logs
 
+logs
 *.bak
 *.sav
 
 .*.s[a-w][a-z]
 .netrwhist
 
+
 .git
+.gitconfig
+gitconfig
 .gitignore
+gitignore
 .gitmodules
+gitmodules
 
 .hg
 .hgignore

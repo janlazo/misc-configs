@@ -1,5 +1,23 @@
+#### Source Code Index
+tags
+
+#### Compiled directories
+## General
+bin/
+dist/
+target/
+
+## 3rd party support
+assets/
+vendor/
+
+## Javascript
+node_modules/
+
+
 #### Compiled files
 ## General
+*.pdf
 # Executables
 *.bin
 *.exe
@@ -28,18 +46,9 @@
 *.dvi
 
 
-#### Compiled directories
-## General
-bin/
-dist/
-
-
 #### Image files
 ## General
 *.iso
-# Must have a non-empty filename
-.pdf
-.ps
 
 ## Wireshark
 *.pcap
@@ -47,7 +56,7 @@ dist/
 
 #### Backup files
 ## General
-logs
+logs/
 *~
 *.bak
 *.sav
@@ -58,10 +67,6 @@ logs
 *[._]s[a-w][a-z]
 # Temporary
 .netrwhist
-
-
-#### Source Code Index
-tags
 
 
 #### Other SCM
@@ -75,3 +80,6 @@ tags
 
 ## SVN
 .svn/
+
+## Accurev
+.accurev/
