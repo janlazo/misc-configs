@@ -1,14 +1,14 @@
 tags
 
 
-bin
-dist
-target
+bin/*
+dist/*
+target/*
 
-assets
-vendor
+assets/*
+vendor/*
 
-node_modules
+node_modules/*
 
 
 *.bin
@@ -36,7 +36,7 @@ node_modules
 *.dvi
 
 
-logs
+logs/*
 *.bak
 *.sav
 
@@ -44,7 +44,7 @@ logs
 .netrwhist
 
 
-.git
+.git/*
 .gitconfig
 gitconfig
 .gitignore
@@ -52,13 +52,9 @@ gitignore
 .gitmodules
 gitmodules
 
-.hg
+.hg/*
 .hgignore
-.hgsigs
-.hgsub
-.hgsubstate
-.hgtags
 
-.svn
+.svn/*
 
-.accurev
+.accurev/*
