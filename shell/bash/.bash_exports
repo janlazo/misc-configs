@@ -1,3 +1,15 @@
+## Inner Functions ##
+add_bin_to_path() {
+    for dir in "$@";
+    do [ -d $dir/bin ] && export PATH=$PATH:$dir/bin;
+    done;
+}
+
+
+## Shell ##
+export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[00m\]\n\$ '
+
+
 ### Text Editor ###
 export VISUAL=vim;
 export EDITOR=vim;
@@ -10,21 +22,10 @@ export LANGUAGE=en_US.UTF-8;
 
 
 ### Paths ###
+# Python
 export PYTHONPATH=$PYTHONPATH:/usr/bin:/usr/local/bin;
 
-
-### Misc. Environment Variables ###
-
-
-### User-Defined Exports ###
-export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[00m\]\n\$ '
-
-# add to path user's private bin if it exists
-if [ -d "$HOME/bin" ] ;
-then
-    export PATH=$PATH:$HOME/bin;
-fi;
-
+# Java
 # TODO Update this after installing a Java Dev Toolkit (JDK)
 export JAVA_HOME=$JAVA_HOME;
 
@@ -32,6 +33,14 @@ if [ -n "$JAVA_HOME" ];
 then
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$JAVA_HOME/lib;
     export CLASSPATH=$CLASSPATH:$LD_LIBRARY_PATH;
-
-    export PATH=$PATH:$JAVA_HOME/bin;
 fi;
+
+# Put them all together
+add_bin_to_path $HOME $JAVA_HOME;
+
+
+### User-Defined Exports ###
+
+
+## Cleanup ##
+unset add_bin_to_path

@@ -1,11 +1,5 @@
 #!/bin/sh
 
-## Script Variables
-REPO_D=$(pwd);
-USER_SHELL=$(getent passwd $LOGNAME | cut -d : -f 7);
-USE_BASH=$(test "$USER_SHELL" = "/bin/bash");
-
-
 ## Functions
 backup() {
     BACKUP_D=$HOME/.bak;
@@ -18,6 +12,12 @@ backup() {
         (test -e $file) && mv -f $file $BACKUP_D;
     done;
 }
+
+
+## Script Variables
+REPO_D=$(pwd);
+USER_SHELL=$(getent passwd $LOGNAME | cut -d : -f 7);
+USE_BASH=$(test "$USER_SHELL" = "/bin/bash");
 
 
 ## Setup git submodules in this repository
