@@ -1,7 +1,10 @@
 ## Inner Functions ##
 add_bin_to_path() {
     for dir in "$@";
-    do [ -d $dir/bin ] && export PATH=$PATH:$dir/bin;
+    do
+        if [ -n "$dir" ] && [ -d $dir/bin ];
+        then export PATH=$PATH:$dir/bin;
+        fi;
     done;
 }
 
@@ -35,8 +38,17 @@ then
     export CLASSPATH=$CLASSPATH:$LD_LIBRARY_PATH;
 fi;
 
+# GO
+export GOROOT=$GOROOT;
+[ -d $HOME/.go] && export GOHOME=$HOME/.go;
+export GOPATH=$GOHOME:$GOROOT:$GOPATH;
+
+# Rust
+[ -d $HOME/.cargo ] && export CARGO_HOME=$HOME/.cargo;
+
+
 # Put them all together
-add_bin_to_path $HOME $JAVA_HOME;
+add_bin_to_path $HOME $JAVA_HOME $CARGO_HOME $GOHOME $GOROOT;
 
 
 ### User-Defined Exports ###
