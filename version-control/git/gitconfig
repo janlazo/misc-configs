@@ -13,7 +13,6 @@
 [alias]
 	# Fix the repo
 	fuck = reset HEAD --hard
-	fix = git rebase -i HEAD~1
 
 	# General
 	st = status -s
@@ -22,6 +21,9 @@
 	rba = rebase --abort
 	rbc = rebase --continue
 	rbs = rebase --skip
+	rva = revert --abort
+	rvc = revert --continue
+	rvq = revert --quit
 	pl = pull --rebase
 	df = diff
 	dfc = diff --cached
