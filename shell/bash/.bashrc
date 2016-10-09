@@ -21,3 +21,8 @@ fi;
 if [ -f "$HOME"/.bash_aliases ];
 then . "$HOME"/.bash_aliases;
 fi;
+
+## External Configs ##
+if [ -f $HOME/.bash_external ];
+then . $HOME/.bash_external;
+fi;

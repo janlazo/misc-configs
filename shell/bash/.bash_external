@@ -1,0 +1,4 @@
+# fzf - fuzzy file search in Go
+if [ -f ~/.fzf.bash ];
+then . ~/.fzf.bash;
+fi;
