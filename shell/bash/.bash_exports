@@ -40,7 +40,7 @@ fi;
 
 # GO
 export GOROOT=$GOROOT;
-[ -d $HOME/.go] && export GOHOME=$HOME/.go;
+[ -d $HOME/.go ] && export GOHOME=$HOME/.go;
 export GOPATH=$GOHOME:$GOROOT:$GOPATH;
 
 # Rust
