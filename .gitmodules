@@ -1,0 +1,8 @@
+[submodule "editor/vim.git"]
+	path = editor/vim.git
+	url = https://github.com/janlazo/dotvim
+	branch = vim
+[submodule "editor/nvim.git"]
+	path = editor/nvim.git
+	url = https://github.com/janlazo/dotvim
+	branch = nvim

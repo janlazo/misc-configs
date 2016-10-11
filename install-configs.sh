@@ -50,14 +50,14 @@ then
 
 
     # Vim
-    VIM_D=$REPO_D/editor/dotvim.git;
+    VIM_D=$REPO_D/editor/vim.git;
 
     backup $HOME/.vimrc $HOME/.vim;
     ln -s $VIM_D $HOME/.vim;
 
 
     # Neovim
-    NVIM_D=$REPO_D/editor/dotnvim.git;
+    NVIM_D=$REPO_D/editor/nvim.git;
 
     backup $HOME/.config/nvim;
     ln -s $NVIM_D $HOME/.config/nvim;
