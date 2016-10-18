@@ -2,7 +2,3 @@
 	path = editor/vim.git
 	url = https://github.com/janlazo/dotvim
 	branch = master
-[submodule "editor/nvim.git"]
-	path = editor/nvim.git
-	url = https://github.com/janlazo/dotvim
-	branch = nvim

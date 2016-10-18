@@ -49,19 +49,13 @@ then
     git config --global core.excludesfile $HOME/.gitignore;
 
 
-    # Vim
+    # Vim and Neovim
     VIM_D=$REPO_D/editor/vim.git;
 
-    backup $HOME/.vimrc $HOME/.vim;
+    backup $HOME/.vimrc $HOME/.vim $HOME/.config/nvim;
+
     ln -s $VIM_D $HOME/.vim;
-
-
-    # Neovim
-    NVIM_D=$REPO_D/editor/nvim.git;
-
-    backup $HOME/.config/nvim;
-    ln -s $NVIM_D $HOME/.config/nvim;
-
+    ln -s $VIM_D $HOME/.config/nvim;
 
     # Ctags
     CTAGS_D=$REPO_D/editor/ctags;
