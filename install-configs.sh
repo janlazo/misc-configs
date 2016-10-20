@@ -28,6 +28,10 @@ git submodule update --init --recursive;
 ## User config
 if test -n "$HOME";
 then
+    # Tmux
+    backup $HOME/.tmux.conf;
+    cp $REPO_D/terminal/tmux.conf $HOME/.tmux.conf;
+
     # Bash
     if $USE_BASH;
     then
