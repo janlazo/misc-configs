@@ -45,6 +45,15 @@ node_modules/
 # Intermediate
 *.dvi
 
+# HTML
+*.min.html
+
+# CSS
+*.min.css
+
+# Javascript
+*.min.js
+
 
 #### Image files
 ## General
