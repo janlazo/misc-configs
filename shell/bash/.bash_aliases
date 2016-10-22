@@ -1,6 +1,6 @@
 ### Basic Shell Commands ###
 ## Color Commands ##
-# Color only if terminal can use it
+# Color only if terminal is stdout
 if [ -t 1 ];
 then
     ncolors=$(tput colors);
@@ -66,34 +66,7 @@ alias tar.xz='tar -xz -f';          # tar.xz <archive.tar.gz>
 alias tar.l='tar --list -f';    # tar.l <archive.tar>
 
 
-### Package Manager ###
-alias sysupd='su -c "apt-get update && apt-get autoclean"';
-alias sysupg='su -c "apt-get upgrade"';
-alias sysupgf='su -c "apt-get dist-upgrade && apt-get autoremove"';
-
-
-### Version Control ###
-
-
 ### Editor ###
-if [ -x /usr/bin/vim ];
-then
-    # Open multiple files in tabs (default: 1 file/tab)
-    alias view='vim -R';
-
-    if [ -x /usr/bin/gvim ];
-    then
-        # Do the same for gvim
-        alias gview='gvim -R';
-    fi;
-fi;
-
-if [ -x /usr/bin/nvim ];
-then
-    # Open multiple files in tabs (default: 1 file/tab)
-    alias nview='nvim -R';
-fi;
-
 if [ -x /usr/bin/emacs ];
 then
     # open in current terminal, not new window
@@ -101,17 +74,11 @@ then
 fi;
 
 
-### Languages ###
-
-
 ### Internet ###
-# Continue, not restart, on interrupted download
-alias wget='wget -c';
-
 # Use lynx browser to open DuckDuckGo search page
-if [ -x /usr/bin/lynx ];
-then alias ddg='lynx https://duckduckgo.com/html';
-fi;
+# if [ -x /usr/bin/lynx ];
+# then alias ddg='lynx https://duckduckgo.com/html';
+# fi;
 
 
 ### Images ###
@@ -119,10 +86,12 @@ if [ -x /usr/bin/pngcrush ];
 then alias pngcrush.f='pngcrush -brute -l 9';
 fi;
 
+
 ### Games ###
 if [ -x /usr/games/desmume ];
 then alias desmume.jit="desmume --cpu-mode=1";  # dynamic recompilation (JIT)
 fi;
+
 
 ### Misc. Apps ###
 # Assumed to be installed via pip
@@ -156,5 +125,6 @@ then
 
     unset -f ytdl_args:
 fi;
+
 
 ### User-Defined Aliases ###
