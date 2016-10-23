@@ -2,8 +2,8 @@
 add_bin_to_path() {
     for dir in "$@";
     do
-        if [ -n "$dir" ] && [ -d $dir/bin ];
-        then export PATH=$PATH:$dir/bin;
+        if [ -n "$dir" ] && [ -d "$dir/bin" ];
+        then export PATH="$PATH:$dir/bin";
         fi;
     done;
 }
@@ -30,29 +30,29 @@ export LC_ALL=$LANG;
 
 ### Paths ###
 # Python
-export PYTHONPATH=$PYTHONPATH:/usr/bin:/usr/local/bin;
+export PYTHONPATH="$PYTHONPATH:/usr/bin:/usr/local/bin";
 
 # Java
 # TODO Update this after installing a Java Dev Toolkit (JDK)
-export JAVA_HOME=$JAVA_HOME;
+export JAVA_HOME="$JAVA_HOME";
 
 if [ -n "$JAVA_HOME" ];
 then
-    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$JAVA_HOME/lib;
-    export CLASSPATH=$CLASSPATH:$LD_LIBRARY_PATH;
+    export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$JAVA_HOME/lib";
+    export CLASSPATH="$CLASSPATH:$LD_LIBRARY_PATH";
 fi;
 
 # GO
-export GOROOT=$GOROOT;
-[ -d $HOME/.go ] && export GOHOME=$HOME/.go;
-export GOPATH=$GOHOME:$GOROOT:$GOPATH;
+export GOROOT="$GOROOT";
+[ -d "$HOME/.go" ] && export GOHOME="$HOME/.go";
+export GOPATH="$GOHOME:$GOROOT:$GOPATH";
 
 # Rust
-[ -d $HOME/.cargo ] && export CARGO_HOME=$HOME/.cargo;
+[ -d "$HOME"/.cargo ] && export CARGO_HOME="$HOME/.cargo";
 
 
 # Put them all together
-add_bin_to_path $HOME $JAVA_HOME $CARGO_HOME $GOHOME $GOROOT;
+add_bin_to_path "$HOME" "$JAVA_HOME" "$CARGO_HOME" "$GOHOME" "$GOROOT";
 
 
 ### User-Defined Exports ###
