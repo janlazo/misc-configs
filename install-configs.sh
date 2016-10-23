@@ -34,7 +34,7 @@ then
 
     backup "$HOME/.tmux.conf" "$HOME/tmux";
     cp -rf "$TMUX_D" "$HOME";
-    printf "run '$HOME/tmux/tmux.conf'" > "$HOME/.tmux.conf";
+    printf "source-file '%s/tmux/tmux.conf'\n" "$HOME" > "$HOME/.tmux.conf";
 
     # Bash
     if $USE_BASH;
