@@ -32,9 +32,9 @@ then
     # Tmux
     TMUX_D="$REPO_D/terminal/tmux";
 
-    backup "$HOME/.tmux.conf" "$HOME/tmux";
-    ln -s "$TMUX_D" "$HOME/tmux";
-    printf "source-file '%s/tmux/tmux.conf'\n" "$HOME" > "$HOME/.tmux.conf";
+    backup "$HOME/.tmux.conf" "$HOME/.tmux";
+    ln -s "$TMUX_D" "$HOME/.tmux";
+    printf "source-file '%s/.tmux/tmux.conf'\n" "$HOME" > "$HOME/.tmux.conf";
 
     # Bash
     if $USE_BASH;
