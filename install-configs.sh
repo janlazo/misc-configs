@@ -6,6 +6,7 @@ backup() {
 
     (test ! -d $BACKUP_D) && mkdir $BACKUP_D;
 
+    # TODO: Handle error via early return
     for file in "$@";
     do
         printf "Moving %s in %s\n" $file $BACKUP_D;
@@ -29,8 +30,11 @@ git submodule update --init --recursive;
 if test -n "$HOME";
 then
     # Tmux
-    backup $HOME/.tmux.conf;
-    cp $REPO_D/terminal/tmux.conf $HOME/.tmux.conf;
+    TMUX_D=$REPO_D/terminal/tmux;
+
+    backup $HOME/.tmux.conf $HOME/tmux;
+    cp $TMUX_D $HOME;
+    printf "run '$HOME/tmux/tmux.conf'" > $HOME/.tmux.conf;
 
     # Bash
     if $USE_BASH;
