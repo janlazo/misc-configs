@@ -1,4 +1,4 @@
 # fzf - fuzzy file search in Go
-if [ -f "$HOME/.fzf.bash" ];
-then . "$HOME/.fzf.bash";
+if [ -f "$HOME/.fzf" ];
+then . "$HOME/.fzf/shell/completion.bash";
 fi;
