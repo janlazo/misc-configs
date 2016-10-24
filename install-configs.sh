@@ -2,6 +2,7 @@
 
 ## Functions
 backup() {
+    # TODO: Add UUID or unique date as part of backup folder name
     BACKUP_D="$HOME/.bak";
 
     (test ! -d "$BACKUP_D") && mkdir "$BACKUP_D";
@@ -41,10 +42,10 @@ then
     then
         BASH_D="$REPO_D/shell/bash";
 
-        backup "$HOME"/.bashrc "$HOME"/.bash_exports "$HOME"/.bash_aliases;
-        cp "$BASH_D"/.bashrc "$HOME";
-        cp "$BASH_D"/.bash_exports "$HOME";
-        cp "$BASH_D"/.bash_aliases "$HOME";
+        backup "$HOME/.bash_profile" "$HOME/.bashrc" "$HOME/.bash_aliases";
+        rm -rf "$HOME/.bash";
+        cp -rf "BASH_D" "$HOME/.bash";
+        cp "$HOME/.bash/bash_profile" "$HOME/.bash_profile";
     fi;
 
 

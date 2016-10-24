@@ -1,0 +1,18 @@
+## Bash config ##
+[ -z "$PS1" ] && return; # don't do anything if not running interactively
+
+shopt -s checkwinsize    # check (& update) window size after every command
+shopt -s histappend      # append to history file, don't overrite
+
+HISTCONTROL=ignoreboth   # no duplicate lines, lines starting with space
+HISTFILESIZE=1000        # max num of lines
+HISTSIZE=100             # max num of commands
+
+! [ -d "$HOME/.bash" ] && return;   # Early exit if ~/.bash doesn't exit
+
+
+## Bash Plugins
+PLUGIN_D="$HOME/.bash/plugin";
+[ -f "$PLUGIN_D/bash_exports" ]  && . "$PLUGIN_D/bash_exports";
+[ -f "$PLUGIN_D/bash_external" ] && . "$PLUGIN_D/bash_external";
+[ -f "$PLUGIN_D/bash_aliases" ]  && . "$PLUGIN_D/bash_aliases";

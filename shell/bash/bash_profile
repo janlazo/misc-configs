@@ -1,0 +1,4 @@
+# early exit if bash is not running this script
+! [ -n "$BASH_VERSION" ] && return;
+
+[ -d "$HOME/.bash" ] && . "$HOME/.bash/bashrc";
