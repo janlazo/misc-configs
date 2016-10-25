@@ -2,7 +2,7 @@
 	path = editor/vim.git
 	url = https://github.com/janlazo/dotvim
 	branch = master
-[submodule "terminal/tmux/plugins/tpm.git"]
-	path = terminal/tmux/plugins/tpm.git
-	url = https://github.com/tmux-plugins/tpm
+[submodule "terminal/tmux.git"]
+	path = terminal/tmux.git
+	url = https://github.com/janlazo/dottmux
 	branch = master

@@ -31,7 +31,7 @@ git submodule update --init --recursive;
 if test -n "$HOME";
 then
     # Tmux
-    TMUX_D="$REPO_D/terminal/tmux";
+    TMUX_D="$REPO_D/terminal/tmux.git";
 
     backup "$HOME/.tmux.conf" "$HOME/.tmux";
     ln -s "$TMUX_D" "$HOME/.tmux";
