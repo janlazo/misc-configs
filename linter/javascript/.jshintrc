@@ -3,7 +3,7 @@
         "angular": false
     },
 
-    "bitwise": true,
+    "bitwise": false,
     "curly": true,
     "eqeqeq": true,
     "esversion": 5,
