@@ -11,8 +11,8 @@ USE_BASH=$(test "$USER_SHELL" = "/bin/bash");
 BACKUP_D="$HOME/.bak";
 UUID="$(uuidgen)";
 
-test -n "$UUID" && BACKUP_D="$BACKUP_D.$UUID";
-(test ! -d "$BACKUP_D") && mkdir "$BACKUP_D";
+test -n "$UUID" && BACKUP_D="$BACKUP_D/$UUID";
+(test ! -d "$BACKUP_D") && mkdir -p "$BACKUP_D";
 
 printf "\nBackup Directory: %s\n" "$BACKUP_D";
 
