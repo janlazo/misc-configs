@@ -46,8 +46,8 @@ then
             "$HOME/.bash";
 
         test -d "$HOME/.bash" && rm -rf "$HOME/.bash";
-        cp -r "$BASH_D" "$HOME/.bash";
-        cp "$HOME/.bash/bash_profile" "$HOME/.bash_profile";
+        ln -s "$BASH_D" "$HOME/.bash";
+        ln "$HOME/.bash/bash_profile" "$HOME/.bash_profile";
     fi;
 
 
