@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ### Basic Shell Commands ###
 ## Color Commands ##
 # Color only if terminal is stdout

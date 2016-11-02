@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ## Inner Functions ##
 add_bin_to_path() {
     for dir in "$@";

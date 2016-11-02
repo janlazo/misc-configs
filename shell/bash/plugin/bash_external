@@ -1,2 +1,0 @@
-# fzf - fuzzy file search in Go
-[ -f "$HOME/.fzf" ] && . "$HOME/.fzf/shell/completion.bash";

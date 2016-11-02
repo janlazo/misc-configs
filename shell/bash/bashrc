@@ -12,8 +12,12 @@ HISTSIZE=100             # max num of commands
 ! [ -d "$HOME/.bash" ] && return;   # Early exit if ~/.bash doesn't exit
 
 
-## Bash Plugins
-PLUGIN_D="$HOME/.bash/plugin";
-[ -f "$PLUGIN_D/bash_exports" ]  && . "$PLUGIN_D/bash_exports";
-[ -f "$PLUGIN_D/bash_external" ] && . "$PLUGIN_D/bash_external";
-[ -f "$PLUGIN_D/bash_aliases" ]  && . "$PLUGIN_D/bash_aliases";
+## Bash Extensions
+DIRS="export source alias";
+
+for dir in $DIRS;
+do
+    [ -d "$HOME/.bash/$dir" ]  && . "$HOME/.bash/$dir"/*.sh;
+done
+
+unset DIRS
