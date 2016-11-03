@@ -76,6 +76,7 @@ logs/
 *[._]s[a-w][a-z]
 # Temporary
 .netrwhist
+Session.vim
 
 
 #### Other SCM
