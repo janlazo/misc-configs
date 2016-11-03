@@ -1,16 +1,5 @@
 #!/bin/bash
 
-## Inner Functions ##
-add_bin_to_path() {
-    for dir in "$@";
-    do
-        if [ -n "$dir" ] && [ -d "$dir/bin" ];
-        then export PATH="$PATH:$dir/bin";
-        fi;
-    done;
-}
-
-
 ## Shell ##
 export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[00m\]\n\$ '
 
@@ -60,6 +49,3 @@ add_bin_to_path "$HOME" "$JAVA_HOME" "$CARGO_HOME" "$GOHOME" "$GOROOT";
 ### User-Defined Exports ###
 # fzf - fuzzy file searcher for the terminal
 add_bin_to_path "$HOME/.fzf";
-
-## Cleanup ##
-unset add_bin_to_path

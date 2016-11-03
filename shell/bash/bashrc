@@ -13,11 +13,12 @@ HISTSIZE=100             # max num of commands
 
 
 ## Bash Extensions
-DIRS="export source alias";
+DIRS="lib export source alias";
 
 for dir in $DIRS;
 do
     [ -d "$HOME/.bash/$dir" ]  && . "$HOME/.bash/$dir"/*.sh;
 done
 
+unset dir
 unset DIRS
