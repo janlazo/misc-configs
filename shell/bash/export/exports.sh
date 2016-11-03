@@ -58,7 +58,8 @@ add_bin_to_path "$HOME" "$JAVA_HOME" "$CARGO_HOME" "$GOHOME" "$GOROOT";
 
 
 ### User-Defined Exports ###
-
+# fzf - fuzzy file searcher for the terminal
+add_bin_to_path "$HOME/.fzf";
 
 ## Cleanup ##
 unset add_bin_to_path
