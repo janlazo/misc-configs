@@ -9,16 +9,6 @@ then
 
     if [ -n "$ncolors" ] && [ $ncolors -ge 8 ];
     then
-        # Alias command to have color argument by default
-        alias ls='ls --color=auto';
-        alias grep='grep --color=auto';
-        alias less='less -R';
-
-        # Replace command with color counterpart
-        if [ -x /usr/bin/colordiff ];
-        then alias diff='colordiff';
-        fi;
-
         if [ -x /usr/bin/colorgcc ];
         then alias gcc='colorgcc';
         fi;
@@ -30,42 +20,6 @@ then
 
     unset ncolors;
 fi;
-
-# Verbose
-alias ls.v='ls -x -hks -bF --group-directories-first';
-alias grep.v='grep -Hn';
-alias rgrep.v='grep.v -r';
-alias fgrep.v='grep.v -F';
-alias egrep.v='grep.v -E';
-
-# Wrap
-alias less.w='less --chop-long-lines';
-
-
-## Non-color Commands ##
-# Verbose, and if possible, make it harder to delete/overwrite files
-alias rm='rm -v -I --preserve-root';
-alias cp='cp -v --no-clobber';
-alias mv='mv -v --no-clobber';
-alias ln='ln -v';
-alias mkdir='mkdir -v';
-alias tar='tar -v --totals --block-number';
-
-alias free='free -hlt';
-alias du='du -hk --max-depth 1';
-alias df='df -hk --print-type';
-
-# Create parent directories if necessary
-alias mkdir.p='mkdir -p';
-
-# Create/Extract (compressed) archives
-alias tar.c='tar -c --verify -f';   # tar.c <archive.tar> <files>
-alias tar.cz='tar -cz -f';          # tar.cz <archive.tar.gz> <files>
-alias tar.x='tar -x -f';            # tar.x <archive.tar>
-alias tar.xz='tar -xz -f';          # tar.xz <archive.tar.gz>
-
-# List archive contents (without extraction)
-alias tar.l='tar --list -f';    # tar.l <archive.tar>
 
 
 ### Editor ###
