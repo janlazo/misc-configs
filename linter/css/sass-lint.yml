@@ -1,0 +1,7 @@
+---
+options:
+    merge-default-rules: false
+    max-warnings: 100
+rules:
+    indentation:
+        size: 4
