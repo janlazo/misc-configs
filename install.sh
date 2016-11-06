@@ -39,7 +39,7 @@ then
     # Bash
     if $USE_BASH;
     then
-        BASH_D="$REPO_D/shell/bash";
+        BASH_D="$REPO_D/shell/bash.git";
 
         backup -b $BACKUP_D \
             "$HOME/.bash_profile" "$HOME/.bashrc" "$HOME/.bash_aliases" \

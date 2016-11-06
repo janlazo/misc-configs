@@ -6,3 +6,7 @@
 	path = terminal/tmux.git
 	url = https://github.com/janlazo/dottmux
 	branch = master
+[submodule "shell/bash.git"]
+	path = shell/bash.git
+	url = https://github.com/janlazo/dotbash
+	branch = master
