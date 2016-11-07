@@ -6,6 +6,8 @@ Cross-Browser Addons
 
 Browser Exclusive Addons
 Firefox-based
+- files
+    - markdown-viewer       (view markdown files offline like in Github)
 - development
     - Firebug               (better dev tools than default in Firefox)
         - Firepath          (upgrade Firebug's handling of XPath)
