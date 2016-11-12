@@ -42,11 +42,14 @@
 	# Submodules
 	subm = submodule
 	subm-a = submodule add
+	subm-a-1 = submodule add --depth 1
 	subm-st = submodule status --recursive
 	subm-i = submodule init
 	subm-di = submodule deinit --force
 	subm-up = submodule update --init --recursive
-	subm-upr = submodule update --init --recursive --remote
+	subm-up-1 = submodule update --init --recursive --depth 1
+	subm-up-r = submodule update --init --recursive --remote
+	subm-up-r1 = submodule update --init --recursive --remote --depth 1
 
 	# SVN
 	s-rb = svn rebase
