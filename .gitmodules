@@ -10,3 +10,7 @@
 	path = shell/bash.git
 	url = https://github.com/janlazo/dotbash
 	branch = master
+[submodule "font/fira.git"]
+	path = font/fira.git
+	url = https://github.com/mozilla/Fira
+	branch = master
