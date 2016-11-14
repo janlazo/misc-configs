@@ -1,4 +1,16 @@
-# Default Profile Directory: $Env:USERPROFILE\Documents\WindowsPowerShell
+function global:prompt
+{
+    $regex   = [regex]::Escape($Env:USERPROFILE) + "(\\.*)*$";
+    $curpath = $executionContext.SessionState.Path.CurrentLocation.Path;
+    $relpath = $($curpath -replace $regex, '~$1');
+    $prompt  = $('PS>' * ($nestedPromptLevel + 1));
+
+    Write-Host -ForegroundColor Green -nonewline $Env:USERNAME" "
+    Write-Host -ForegroundColor Blue             $relpath
+    Write-Host -ForegroundColor White -nonewline $prompt
+
+    return " ";
+}
 
 function BypassPowerShell
 {
@@ -7,13 +19,9 @@ function BypassPowerShell
 
 function IsAdmin
 {
-    # Check current window privileges
-    $user = [Security.Principal.WindowsIdentity]::GetCurrent();
-    $admin = [Security.Principal.WindowsBuiltInRole]::Administrator;
-    # $admin_SID = "S-1-5-32-544";
-    $result = ([Security.Principal.WindowsPrincipal]$user
-                ).IsInRole($admin);
-    # $result = $user.groups -match $admin_SID;
+    $user   = [Security.Principal.WindowsIdentity]::GetCurrent();
+    $admin  = [Security.Principal.WindowsBuiltInRole]::Administrator;
+    $result = ([Security.Principal.WindowsPrincipal]$user).IsInRole($admin);
 
     return [bool]$result;
 }
@@ -21,13 +29,13 @@ function IsAdmin
 function SymLink
 {
     Param(
-        [String]$src="",
-        [String]$dest=(Get-Item -Path ".\").FullName   # current directory
+        [String]$src  = "",
+        [String]$dest = $PWD.Path
     )
 
     if (-Not (IsAdmin))
     {
-        Write-Output "Symlinks require admin permissions";
+        Write-Output "Need admin permissions to make symlinks";
         return;
     }
 
@@ -36,18 +44,16 @@ function SymLink
     $dest = $dest.trim();
     $dest_d = $(Get-Item -Path $(Split-Path $dest -parent)).FullName;
     $dest_f = $(Split-Path $dest -leaf);
+    $flag = "";
 
     # Setup the directory flag
     if (Test-Path $src -pathType container)
     {
-        $dir_flag="/D";
-    } else
-    {
-        $dir_flag="";
+        $flag = "/D";
     }
 
     # Make the symlink
-    cmd /c mklink $dir_flag "$dest_d\$dest_f" $src;
+    cmd /c mklink $flag "$dest_d\$dest_f" $src;
 }
 
 function SetTerminalColors
@@ -57,12 +63,11 @@ function SetTerminalColors
 }
 
 
-Set-Alias ps1 BypassPowerShell;
-Set-Alias syml SymLink;
-
-
+# Begin Configuration
 SetTerminalColors;
 
+Set-Alias ps1 BypassPowerShell;
+Set-Alias syml SymLink;
 
 # Chocolatey profile
 if (Test-Path($env:ChocolateyInstall))
@@ -75,3 +80,4 @@ if (Test-Path($env:ChocolateyInstall))
         Import-Module "$ChocolateyProfile";
     }
 }
+
