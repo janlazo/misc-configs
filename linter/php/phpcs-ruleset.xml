@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ruleset name="Jan Lazo">
+    <description>Jan Lazo's PHP coding standard</description>
+    <rule ref="PSR1"/>
+</ruleset>
