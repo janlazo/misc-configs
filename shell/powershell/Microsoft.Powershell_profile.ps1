@@ -70,7 +70,7 @@ Set-Alias ps1 BypassPowerShell;
 Set-Alias syml SymLink;
 
 # Chocolatey profile
-if (Test-Path($env:ChocolateyInstall))
+if ([bool]($Env:ChocolateyInstall) -and (Test-Path($env:ChocolateyInstall)))
 {
     $ChocolateyProfile =
         "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1";
