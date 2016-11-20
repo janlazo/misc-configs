@@ -1,6 +1,6 @@
 ---
 cmdargs:
-    severity: error
+    severity: warning
     stat: true
     error-limit: 50
 
