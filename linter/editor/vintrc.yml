@@ -1,6 +1,6 @@
 ---
 cmdargs:
-    severity: warning
+    severity: style_problem
     stat: true
     error-limit: 50
 
@@ -9,3 +9,7 @@ cmdargs:
 
     env:
         neovim: true
+
+policies:
+    ProhibitUnnecessaryDoubleQuote:
+        enabled: false
