@@ -33,7 +33,7 @@ then
 
     backup -b $BACKUP_D "$HOME/.tmux.conf" "$HOME/.tmux";
     ln -s "$TMUX_D" "$HOME/.tmux";
-    printf "source-file '%s/.tmux/tmux.conf'\n" "$HOME" > "$HOME/.tmux.conf";
+    printf "run-shell '%s/.tmux/config.tmux'\n" "$HOME" > "$HOME/.tmux.conf";
 
 
     # Bash
