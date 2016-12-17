@@ -1,7 +1,5 @@
 ansicolor==0.2.4
-chardet==2.3.0
 click==6.6
-enum34==1.0.4
 future==0.16.0
 pathlib==1.0.1
 proselint==0.7.0
