@@ -1,10 +1,4 @@
 {
-    "predef": [
-        "$",
-        "angular",
-        "jquery"
-    ],
-
     "color": true,
     "terse": true,
     "todo": true,
@@ -21,7 +15,5 @@
     "vars": true,
 
     "anon": true,
-    "browser": true,
-    "es5": true,
-    "node":true
+    "es5": true
 }
