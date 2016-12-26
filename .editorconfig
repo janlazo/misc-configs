@@ -1,0 +1,14 @@
+#### Defaults for all Files ####
+[*]
+# General
+charset = utf-8
+trim_trailing_whitespace = true
+
+# Newlines
+end_of_line = lf
+insert_final_newline = true
+
+# Indents
+indent_style = space
+indent_size = 4
+tab_width = 8
