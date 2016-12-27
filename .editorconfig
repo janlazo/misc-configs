@@ -1,3 +1,6 @@
+# EditorConfig Core
+root = true
+
 #### Defaults for all Files ####
 [*]
 # General
