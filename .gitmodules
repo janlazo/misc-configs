@@ -10,3 +10,7 @@
 	path = shell/bash.git
 	url = https://github.com/janlazo/dotbash
 	branch = master
+[submodule "editor/micro.git"]
+	path = editor/micro.git
+	url = https://github.com/janlazo/dotmicro
+	branch = master
