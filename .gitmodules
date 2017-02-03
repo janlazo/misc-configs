@@ -18,3 +18,7 @@
 	path = shell/powershell.git
 	url = https://github.com/janlazo/dotpowershell
 	branch = master
+[submodule "editor/emacs.git"]
+	path = editor/emacs.git
+	url = https://github.com/janlazo/dotemacs
+	branch = master
