@@ -70,7 +70,7 @@ then
 
 
     # Ctags
-    CTAGS_D="$REPO_D"/editor/ctags;
+    CTAGS_D="$REPO_D"/etc/ctags;
 
     backup -b $BACKUP_D "$HOME"/.ctags "$HOME"/.ctagsignore;
     cp "$CTAGS_D"/.ctags "$HOME";
