@@ -1,0 +1,12 @@
+# General
+--ignore-file=is:tags
+
+# Git
+--ignore-dir=is:.git
+--ignore-file=is:.git
+
+# NodeJS
+--ignore-dir=is:node_modules
+
+# Emacs
+--ignore-dir=is:elpa
