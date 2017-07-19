@@ -1,5 +1,5 @@
 {
-  "timeStamp": 1499545995511,
+  "timeStamp": 1500459594873,
   "version": "1.13.4",
   "userSettings": {
     "advancedUserEnabled": true,
@@ -35,10 +35,10 @@
     "fanboy-enhanced",
     "easyprivacy",
     "disconnect-tracking",
+    "abprotector-0",
     "easylist-nocosmetic",
     "reek-0",
     "awrl-0",
-    "abprotector-0",
     "ublock-unbreak",
     "ublock-privacy",
     "ublock-badware",
@@ -46,7 +46,7 @@
     "user-filters"
   ],
   "hiddenSettingsString": "assetFetchTimeout 30\nautoUpdateAssetFetchPeriod 120\nautoUpdatePeriod 7\nignoreRedirectFilters false\nignoreScriptInjectFilters false\nmanualUpdateAssetFetchPeriod 2000\npopupFontSize unset\nsuspendTabsUntilReady false\nuserResourcesLocation unset",
-  "netWhitelist": "about-scheme\nbehind-the-scene\nchrome-extension-scheme\nchrome-scheme\nloopconversation.about-scheme\nopera-scheme",
+  "netWhitelist": "",
   "dynamicFilteringString": "behind-the-scene * 3p-frame noop\nbehind-the-scene * 3p noop",
   "urlFilteringString": "",
   "hostnameSwitchesString": "no-cosmetic-filtering: * true\nno-remote-fonts: * true\nno-large-media: * true\nno-large-media: www.youtube.com false\nno-large-media: imgur.com false",
@@ -88,6 +88,9 @@
     "https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt": {
       "off": false
     },
+    "abprotector-0": {
+      "off": false
+    },
     "https://easylist-downloads.adblockplus.org/easylist_noelemhide.txt": {
       "off": false
     },
@@ -95,9 +98,6 @@
       "off": false
     },
     "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt": {
-      "off": false
-    },
-    "abprotector-0": {
       "off": false
     },
     "assets/ublock/unbreak.txt": {

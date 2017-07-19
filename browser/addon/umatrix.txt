@@ -1,7 +1,7 @@
 {
   "app": "uMatrix",
   "version": "1.0.0",
-  "when": 1499546540150,
+  "when": 1500460036947,
   "settings": {
     "spoofUserAgentWith": "# http://techblog.willshouse.com/2012/01/03/most-common-user-agents/\n# using ua string which are same browser as real one may work better overall\nMozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36\nMozilla/5.0 (Windows NT 6.1; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0\nMozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.5 Safari/600.5.17\nMozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36\nMozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36\nMozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36\nMozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36\nMozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0",
     "spoofUserAgentEvery": 5,
@@ -24,7 +24,7 @@
     "clearBrowserCache": true,
     "autoUpdate": true
   },
-  "rules": "* * * block\n* * frame block\n* * plugin block\n* 1st-party * allow\n* ajax.googleapis.com script allow\n* assets.tumblr.com css allow\n* bootstrapcdn.com css allow\n* c.disquscdn.com css allow\n* cdn.sstatic.net css allow\n* code.jquery.com script allow\n* disquscdn.com image allow\n* fontawesome.com css allow\n* fontawesome.com image allow\n* fonts.googleapis.com css allow\n* google.com image allow\n* googlevideo.com image allow\n* gstatic.com image allow\n* imgur.com image allow\n* maxcdn.bootstrapcdn.com script allow\n* sstatic.net image allow\n* static.tumblr.com image allow\n* wp.com css allow\n* wp.com image allow\n* www.googleapis.com image allow\naddons.mozilla.org addons.cdn.mozilla.net * allow\nbitbucket.org ace-cdn.atlassian.com script allow\nbitbucket.org bitbucket-marketing-cdn.atlassian.com * allow\nbitbucket.org d301sr5gafysq2.cloudfront.net * allow\nblog.dilbert.com assets.tumblr.com frame allow\nblog.dilbert.com assets.tumblr.com script allow\nblog.dilbert.com c.disquscdn.com script allow\nblog.dilbert.com disqus.com frame allow\nblog.dilbert.com disqus.com script allow\ndeviantart.com deviantart.net css allow\ndeviantart.com deviantart.net image allow\ndilbert.com assets.amuniversal.com image allow\nfacebook.com fbcdn.net image allow\ngithub.com * image allow\ngithub.com pages-themes.github.io frame allow\ngoogle.com ssl.gstatic.com script allow\ngoogle.com ssl.gstatic.com xhr allow\ngoogle.com www.googleapis.com script allow\nhn.algolia.com algolia.net script allow\nhn.algolia.com algolia.net xhr allow\nhn.algolia.com algolianet.com script allow\nhn.algolia.com algolianet.com xhr allow\nhttps-strict: * true\nmatrix-off: about-scheme true\nmatrix-off: behind-the-scene true\nmatrix-off: chrome-extension-scheme true\nmatrix-off: chrome-scheme true\nmatrix-off: localhost true\nmatrix-off: opera-scheme true\nmicrosoft.com s-msft.com css allow\nmicrosoft.com s-msft.com image allow\nmyanimelist.net myanimelist.cdn-dena.com * allow\nmyanimelist.net myanimelist.net frame allow\noffice365.com office.com image allow\nreddit.com thumbs.redditmedia.com css allow\nreddit.com thumbs.redditmedia.com image allow\nreddit.com www.redditstatic.com * allow\nreferrer-spoof: * true\nsteamcommunity.com steamstatic.com css allow\nsteamcommunity.com steamstatic.com image allow\nsteampowered.com steamstatic.com image allow\nthefreedictionary.com tfd.com css allow\nthefreedictionary.com tfd.com image allow\ntwitter.com abs.twimg.com css allow\ntwitter.com twimg.com image allow\nwikia.com wikia.nocookie.net css allow\nwikia.com wikia.nocookie.net image allow\nwikipedia.org wikimedia.org image allow\nwww.reddit.com redditstatic.com css inherit\nwww.reddit.com redditstatic.com image inherit\nwww.youtube.com google.com script allow\nwww.youtube.com googlevideo.com plugin allow\nwww.youtube.com www.gstatic.com script allow\nyoutube.com ggpht.com image allow\nyoutube.com s.ytimg.com * allow",
+  "rules": "* * * block\n* * frame block\n* * plugin block\n* 1st-party * allow\n* ajax.googleapis.com script allow\n* assets.tumblr.com css allow\n* bootstrapcdn.com css allow\n* c.disquscdn.com css allow\n* cdn.sstatic.net css allow\n* code.jquery.com script allow\n* disquscdn.com image allow\n* fontawesome.com css allow\n* fontawesome.com image allow\n* fonts.googleapis.com css allow\n* google.com image allow\n* googlevideo.com image allow\n* gstatic.com image allow\n* imgur.com image allow\n* maxcdn.bootstrapcdn.com script allow\n* sstatic.net image allow\n* static.tumblr.com image allow\n* wp.com css allow\n* wp.com image allow\n* www.googleapis.com image allow\naddons.mozilla.org addons.cdn.mozilla.net * allow\nblog.dilbert.com assets.tumblr.com script allow\nblog.dilbert.com c.disquscdn.com script allow\nblog.dilbert.com disqus.com frame allow\nblog.dilbert.com disqus.com script allow\ndeviantart.com deviantart.net css allow\ndeviantart.com deviantart.net image allow\ndilbert.com assets.amuniversal.com image allow\nfacebook.com fbcdn.net image allow\ngithub.com * image allow\ngoogle.com ssl.gstatic.com script allow\ngoogle.com ssl.gstatic.com xhr allow\ngoogle.com www.googleapis.com script allow\nhn.algolia.com algolia.net script allow\nhn.algolia.com algolia.net xhr allow\nhn.algolia.com algolianet.com script allow\nhn.algolia.com algolianet.com xhr allow\nhttps-strict: * true\nmicrosoft.com s-msft.com css allow\nmicrosoft.com s-msft.com image allow\noffice365.com office.com image allow\nreddit.com thumbs.redditmedia.com css allow\nreddit.com thumbs.redditmedia.com image allow\nreddit.com www.redditstatic.com * allow\nreferrer-spoof: * true\nsteamcommunity.com steamstatic.com css allow\nsteamcommunity.com steamstatic.com image allow\nsteampowered.com steamstatic.com image allow\nthefreedictionary.com tfd.com css allow\nthefreedictionary.com tfd.com image allow\ntwitter.com abs.twimg.com css allow\ntwitter.com twimg.com image allow\nwikia.com wikia.nocookie.net css allow\nwikia.com wikia.nocookie.net image allow\nwikipedia.org wikimedia.org image allow\nwww.reddit.com redditstatic.com css inherit\nwww.reddit.com redditstatic.com image inherit\nwww.youtube.com google.com script allow\nwww.youtube.com googlevideo.com plugin allow\nwww.youtube.com www.gstatic.com script allow\nyoutube.com ggpht.com image allow\nyoutube.com s.ytimg.com * allow",
   "hostsFiles": {
     "malware-0": {
       "content": "filters",
@@ -37,13 +37,11 @@
       "hasLocalURL": true,
       "hasRemoteURL": true,
       "updateAfter": 13,
-      "cached": true,
-      "writeTime": 1499546503892,
-      "obsolete": false,
-      "remoteURL": "https://www.malwaredomainlist.com/hostslist/hosts.txt",
+      "writeTime": 0,
+      "obsolete": true,
       "off": false,
-      "entryCount": 1152,
-      "entryUsedCount": 1116
+      "entryCount": 1488,
+      "entryUsedCount": 1420
     },
     "malware-1": {
       "content": "filters",
@@ -59,13 +57,11 @@
       "hasLocalURL": true,
       "hasRemoteURL": true,
       "updateAfter": 13,
-      "cached": true,
-      "writeTime": 1499546508724,
-      "obsolete": false,
-      "remoteURL": "https://mirror.cedia.org.ec/malwaredomains/justdomains",
+      "writeTime": 0,
+      "obsolete": true,
       "off": false,
-      "entryCount": 24916,
-      "entryUsedCount": 24886
+      "entryCount": 9612,
+      "entryUsedCount": 9594
     },
     "dpollock-0": {
       "content": "filters",
@@ -78,13 +74,11 @@
       "supportURL": "http://someonewhocares.org/hosts/",
       "hasLocalURL": false,
       "hasRemoteURL": true,
-      "cached": true,
-      "writeTime": 1499546511567,
-      "obsolete": false,
-      "remoteURL": "http://someonewhocares.org/hosts/hosts",
+      "writeTime": 0,
+      "obsolete": true,
       "off": false,
-      "entryCount": 12847,
-      "entryUsedCount": 9191
+      "entryCount": 12850,
+      "entryUsedCount": 10641
     },
     "hphosts": {
       "content": "filters",
@@ -97,13 +91,11 @@
       "supportURL": "https://hosts-file.net/",
       "hasLocalURL": false,
       "hasRemoteURL": true,
-      "cached": true,
-      "writeTime": 1499546514721,
-      "obsolete": false,
-      "remoteURL": "https://hosts-file.net/.%5Cad_servers.txt",
+      "writeTime": 0,
+      "obsolete": true,
       "off": false,
-      "entryCount": 48013,
-      "entryUsedCount": 43898
+      "entryCount": 48014,
+      "entryUsedCount": 42379
     },
     "mvps-0": {
       "content": "filters",
@@ -116,13 +108,11 @@
       "supportURL": "http://winhelp2002.mvps.org/",
       "hasLocalURL": false,
       "hasRemoteURL": true,
-      "cached": true,
-      "writeTime": 1499546517432,
-      "obsolete": false,
-      "remoteURL": "http://winhelp2002.mvps.org/hosts.txt",
+      "writeTime": 0,
+      "obsolete": true,
       "off": false,
       "entryCount": 13090,
-      "entryUsedCount": 12596
+      "entryUsedCount": 12608
     },
     "plowe-0": {
       "content": "filters",
@@ -137,13 +127,11 @@
       "supportURL": "https://pgl.yoyo.org/adservers/",
       "hasLocalURL": true,
       "hasRemoteURL": true,
-      "cached": true,
-      "writeTime": 1499546520712,
-      "obsolete": false,
-      "remoteURL": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext",
+      "writeTime": 0,
+      "obsolete": true,
       "off": false,
-      "entryCount": 2327,
-      "entryUsedCount": 2327
+      "entryCount": 2425,
+      "entryUsedCount": 2425
     }
   }
 }
