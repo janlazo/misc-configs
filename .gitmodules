@@ -10,10 +10,6 @@
 	path = editor/micro.git
 	url = https://github.com/janlazo/dotmicro
 	branch = master
-[submodule "shell/powershell.git"]
-	path = shell/powershell.git
-	url = https://github.com/janlazo/dotpowershell
-	branch = master
 [submodule "editor/emacs.git"]
 	path = editor/emacs.git
 	url = https://github.com/janlazo/dotemacs
