@@ -10,10 +10,6 @@
 	path = editor/micro.git
 	url = https://github.com/janlazo/dotmicro
 	branch = master
-[submodule "editor/emacs.git"]
-	path = editor/emacs.git
-	url = https://github.com/janlazo/dotemacs
-	branch = master
 [submodule "dotvim8"]
 	path = editor/vim.git
 	url = https://github.com/janlazo/dotvim8
