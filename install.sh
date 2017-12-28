@@ -51,15 +51,6 @@ then
     fi;
 
 
-    # Git
-    GIT_D="$REPO_D"/version-control/git;
-
-    backup -b $BACKUP_D "$HOME"/.gitconfig "$HOME"/.gitignore;
-    cp "$GIT_D"/gitconfig "$HOME"/.gitconfig;
-    cp "$REPO_D"/.gitignore "$HOME";
-    git config --global core.excludesfile "$HOME"/.gitignore;
-
-
     # Vim and Neovim
     VIM_D="$REPO_D"/editor/vim.git;
 
