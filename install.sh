@@ -28,14 +28,6 @@ test ! -d "$HOME/.config" && mkdir "$HOME/.config";
 # Move the ff to an install script per directory for modularity
 if test -n "$HOME";
 then
-    # Tmux
-    TMUX_D="$REPO_D/terminal/tmux.git";
-
-    backup -b $BACKUP_D "$HOME/.tmux.conf" "$HOME/.tmux";
-    ln -s "$TMUX_D" "$HOME/.tmux";
-    printf "run-shell '%s/.tmux/config.tmux'\n" "$HOME" > "$HOME/.tmux.conf";
-
-
     # Bash
     if $USE_BASH;
     then
