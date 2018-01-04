@@ -2,26 +2,20 @@ Cross-Browser Addons
 - privacy/security
     - uBlock Origin         (general blocker)
     - uMatrix               ("browser firewall")
-    - HTTPS Everywhere      (force https on sites w/ known certificates)
 
 Browser Exclusive Addons
 Firefox-based
 - files
     - markdown-viewer       (view markdown files offline like in Github)
-- development
-    - Firebug               (better dev tools than default in Firefox)
-        - Firepath          (upgrade Firebug's handling of XPath)
-    - Selenium IDE          (automate user-simulated test cases)
 - quality-of-life
-    - Clean Links           (simplify long and confusing hyperlinks)
     - Tab Tree              (manage tabs at sidebar)
-      Tree Style Tabs          
+      Tree Style Tabs
     - VimFx                 (add vim-like keybinds)
 - privacy/security
     - NoScript              (handle script-related security issues)
     - Decentraleyes         (local js lib files -> avoid CDNs)
     - Privacy Settings      (convenient toggles for about:config options)
-    
+
 Chromium-based
 - quality-of-life
     - tab outliner          (equivalent of FF's tab tree)
