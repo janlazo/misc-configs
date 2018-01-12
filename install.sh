@@ -28,21 +28,6 @@ test ! -d "$HOME/.config" && mkdir "$HOME/.config";
 # Move the ff to an install script per directory for modularity
 if test -n "$HOME";
 then
-    # Bash
-    if $USE_BASH;
-    then
-        BASH_D="$REPO_D/shell/bash.git";
-
-        backup -b $BACKUP_D \
-            "$HOME/.bash_profile" "$HOME/.bashrc" "$HOME/.bash_aliases" \
-            "$HOME/.bash";
-
-        test -d "$HOME/.bash" && rm -rf "$HOME/.bash";
-        ln -s "$BASH_D" "$HOME/.bash";
-        cp "$HOME/.bash/bash_profile" "$HOME/.bash_profile";
-    fi;
-
-
     # Vim and Neovim
     VIM_D="$REPO_D"/editor/vim.git;
 
