@@ -36,16 +36,6 @@ then
     ln -s "$VIM_D" "$HOME/.vim";
     ln -s "$VIM_D" "$HOME/.config/nvim";
 
-
-    # Ctags
-    CTAGS_D="$REPO_D"/etc/ctags;
-
-    backup -b $BACKUP_D "$HOME"/.ctags "$HOME"/.ctagsignore;
-    cp "$CTAGS_D"/.ctags "$HOME";
-    cp "$CTAGS_D"/.ctagsignore "$HOME";
-    printf "%s=@%s.ctagsignore\n" "--exclude" "$HOME" >> "$HOME"/.ctags;
-
-
     # youtube-dl
     YTDL_D="$REPO_D"/etc/youtube-dl;
 
