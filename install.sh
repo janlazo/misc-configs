@@ -28,14 +28,6 @@ test ! -d "$HOME/.config" && mkdir "$HOME/.config";
 # Move the ff to an install script per directory for modularity
 if test -n "$HOME";
 then
-    # Vim and Neovim
-    VIM_D="$REPO_D"/editor/vim.git;
-
-    backup -b $BACKUP_D "$HOME"/.vimrc "$HOME"/.vim "$HOME"/.config/nvim;
-
-    ln -s "$VIM_D" "$HOME/.vim";
-    ln -s "$VIM_D" "$HOME/.config/nvim";
-
     # youtube-dl
     YTDL_D="$REPO_D"/etc/youtube-dl;
 

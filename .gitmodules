@@ -1,4 +1,0 @@
-[submodule "dotvim8"]
-	path = editor/vim.git
-	url = https://github.com/janlazo/dotvim8
-	branch = master
