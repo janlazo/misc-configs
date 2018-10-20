@@ -7,9 +7,7 @@ Tested only in Debian-based systems
 ## Install
 
 ```sh
-cd <path to your repo folder>
-git clone https://github.com/janlazo/misc-configs
-cd misc-configs
+git clone https://github.com/janlazo/misc-configs <path to your repo folder>
+cd <path to your repo folder> 
 ./install.sh
 ```
-
