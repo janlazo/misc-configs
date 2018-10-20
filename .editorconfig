@@ -1,24 +1,18 @@
 # EditorConfig Core
 root = true
 
-#### Defaults for all Files ####
+# File Defaults
 [*]
-# General
 charset = utf-8
 trim_trailing_whitespace = true
-
-# Newlines
 end_of_line = lf
 insert_final_newline = true
-
-# Indents
 indent_style = space
-indent_size = 4
+indent_size = 2
 tab_width = 8
 
-#### Markdown ####
-[*.md]
 # Github markdown syntax is whitespace-sensitive
 # 2+ trailing spaces forces the following text to start on the next line
+[*.md]
+indent_size = 4
 trim_trailing_whitespace = false
-
