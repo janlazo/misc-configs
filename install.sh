@@ -24,13 +24,6 @@ git submodule update --init --recursive;
 ## User config
 test ! -d "$HOME/.config" && mkdir "$HOME/.config";
 
-# TODO
-# Move the ff to an install script per directory for modularity
 if test -n "$HOME";
 then
-    # youtube-dl
-    YTDL_D="$REPO_D"/etc/youtube-dl;
-
-    backup -b $BACKUP_D "$HOME"/.config/youtube-dl;
-    cp -rf "$YTDL_D" "$HOME"/.config/youtube-dl;
 fi;
