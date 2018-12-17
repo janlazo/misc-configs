@@ -1,22 +1,9 @@
-Cross-Browser Addons
+Cross-Browser
 - privacy/security
     - uBlock Origin         (general blocker)
     - uMatrix               ("browser firewall")
 
-Browser Exclusive Addons
-Firefox-based
-- files
-    - markdown-viewer       (view markdown files offline like in Github)
-- quality-of-life
-    - Tab Tree              (manage tabs at sidebar)
-      Tree Style Tabs
-    - VimFx                 (add vim-like keybinds)
-- privacy/security
-    - NoScript              (handle script-related security issues)
-    - Decentraleyes         (local js lib files -> avoid CDNs)
-    - Privacy Settings      (convenient toggles for about:config options)
-
-Chromium-based
+Chromium-only
 - quality-of-life
     - tab outliner          (equivalent of FF's tab tree)
     - Vimium                (add vim-like keybinds)
